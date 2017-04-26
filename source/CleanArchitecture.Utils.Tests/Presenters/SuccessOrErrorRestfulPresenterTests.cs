@@ -3,6 +3,7 @@ using CleanArchitecture.Utils.Presenters;
 using CleanArchitecture.Utils.TOs;
 using NUnit.Framework;
 using Microsoft.AspNetCore.Mvc;
+using NSubstitute;
 
 namespace CleanArchitecture.Utils.Tests.Presenters
 {

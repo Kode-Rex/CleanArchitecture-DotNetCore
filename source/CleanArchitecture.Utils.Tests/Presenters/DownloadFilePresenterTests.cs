@@ -4,6 +4,7 @@ using CleanArchitecture.Utils.Output;
 using CleanArchitecture.Utils.Presenters;
 using CleanArchitecture.Utils.TOs;
 using NUnit.Framework;
+using NSubstitute;
 
 namespace CleanArchitecture.Utils.Tests.Presenters
 {

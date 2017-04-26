@@ -1,6 +1,4 @@
-﻿using System.Web.Http;
-using System.Web.Http.Results;
-using CleanArchitecture.Utils.HttpResponses;
+﻿using CleanArchitecture.Utils.HttpResponses;
 using CleanArchitecture.Utils.Presenters;
 using CleanArchitecture.Utils.TOs;
 using NSubstitute;
