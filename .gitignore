@@ -1,0 +1,11 @@
+source/CleanArchitecture.Utils.Tests/bin/Debug/netcoreapp1.1/CleanArchitecture.Utils.Tests.deps.json
+source/CleanArchitecture.Utils.Tests/obj/CleanArchitecture.Utils.Tests.csproj.nuget.g.props
+source/CleanArchitecture.Utils.Tests/obj/CleanArchitecture.Utils.Tests.csproj.nuget.g.targets
+source/CleanArchitecture.Utils.Tests/obj/Debug/netcoreapp1.1/CleanArchitecture.Utils.Tests.AssemblyInfo.cs
+source/CleanArchitecture.Utils.Tests/obj/Debug/netcoreapp1.1/CleanArchitecture.Utils.Tests.csproj.FileListAbsolute.txt
+source/CleanArchitecture.Utils.Tests/obj/Debug/netcoreapp1.1/CleanArchitecture.Utils.Tests.csprojResolveAssemblyReference.cache
+source/CleanArchitecture.Utils.Tests/obj/Debug/netcoreapp1.1/CoreCompileInputs.cache
+source/CleanArchitecture.Utils.Tests/obj/Debug/netcoreapp1.1/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+source/CleanArchitecture.Utils.Tests/obj/Debug/netcoreapp1.1/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+source/CleanArchitecture.Utils.Tests/obj/Debug/netcoreapp1.1/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+source/CleanArchitecture.Utils.Tests/obj/project.assets.json
