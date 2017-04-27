@@ -5,7 +5,11 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>TddBuddy</Authors>
     <Company>TddBuddy</Company>
-    <Description>A set of .net utilities to make it simple to implement the clean architecture</Description>
+    <Description>A set of .net utilities to make it simple to implement the clean architecture. Mainly file, error and JSON object presenters.</Description>
+    <AssemblyName>TddBuddy.CleanArchitecture.Utils</AssemblyName>
+    <RootNamespace>TddBuddy.CleanArchitecture.Utils</RootNamespace>
+    <PackageId>TddBuddy-CleanArchitecture-Utils</PackageId>
+    <Version>0.9.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
