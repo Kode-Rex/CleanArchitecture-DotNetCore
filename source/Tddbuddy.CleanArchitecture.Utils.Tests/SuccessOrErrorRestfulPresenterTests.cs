@@ -1,27 +1,29 @@
 ﻿using CleanArchitecture.Utils.HttpResponses;
 using CleanArchitecture.Utils.Presenters;
 using CleanArchitecture.Utils.TOs;
-using NSubstitute;
-using NUnit.Framework;
 using Microsoft.AspNetCore.Mvc;
+using NSubstitute;
+using Xunit;
 
-namespace CleanArchitecture.Utils.Tests.Presenters
+namespace Tddbuddy.CleanArchitecture.Utils.Tests
 {
-    [TestFixture]
-    public class ErrorRestfulPresenterTests
+    public class SuccessOrErrorRestfulPresenterTests
     {
-        [Test]
-        public void Render_GivenNoResponse_ShouldReturnOkResult()
+        [Fact]
+        public void Render_GivenSuccessfullResponse_ShouldReturnOkResultWithContent()
         {
             //---------------Set up test pack-------------------
+            var content = new object();
             var presenter = CreatePresenter();
+            presenter.Respond(content);
             //---------------Execute Test ----------------------
-            var result = presenter.Render() as OkResult;
+            var result = presenter.Render() as OkObjectResult;
             //---------------Test Result -----------------------
-            Assert.IsNotNull(result);
+            Assert.NotNull(result);
+            Assert.Equal(content, result.Value);
         }
 
-        [Test]
+        [Fact]
         public void Render_GivenErrorResponse_ShouldReturnUnprocessableEntityResultWithContent()
         {
             //---------------Set up test pack-------------------
@@ -31,14 +33,14 @@ namespace CleanArchitecture.Utils.Tests.Presenters
             //---------------Execute Test ----------------------
             var result = presenter.Render() as UnprocessasbleEntityResult<ErrorOutputTo>;
             //---------------Test Result -----------------------
-            Assert.IsNotNull(result);
-            Assert.AreEqual(content, result.Value);
+            Assert.NotNull(result);
+            Assert.Equal(content, result.Value);
         }
 
-        private ErrorRestfulPresenter<ErrorOutputTo> CreatePresenter()
+        private SuccessOrErrorRestfulPresenter<object, ErrorOutputTo> CreatePresenter()
         {
             var apiController = Substitute.For<Controller>();
-            return new ErrorRestfulPresenter<ErrorOutputTo>(apiController);
+            return new SuccessOrErrorRestfulPresenter<object, ErrorOutputTo>(apiController);
         }
     }
 }

@@ -2,6 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp1.1</TargetFramework>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>TddBuddy</Authors>
+    <Company>TddBuddy</Company>
+    <Description>A set of .net utilities to make it simple to implement the clean architecture</Description>
   </PropertyGroup>
 
   <ItemGroup>
