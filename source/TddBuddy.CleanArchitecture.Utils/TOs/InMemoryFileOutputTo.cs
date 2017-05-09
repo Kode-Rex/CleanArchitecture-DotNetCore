@@ -1,7 +1,7 @@
 using System.IO;
-using CleanArchitecture.Utils.Output;
+using TddBuddy.CleanArchitecture.Utils.Output;
 
-namespace CleanArchitecture.Utils.TOs
+namespace TddBuddy.CleanArchitecture.Utils.TOs
 {
     public class InMemoryFileOutputTo : IFileOutput
     {

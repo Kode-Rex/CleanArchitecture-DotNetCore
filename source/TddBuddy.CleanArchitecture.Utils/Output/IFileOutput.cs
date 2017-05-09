@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace CleanArchitecture.Utils.Output
+namespace TddBuddy.CleanArchitecture.Utils.Output
 {
     public interface IFileOutput
     {

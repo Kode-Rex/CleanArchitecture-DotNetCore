@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CleanArchitecture.Utils.HttpResponses
+namespace TddBuddy.CleanArchitecture.Utils.HttpResponses
 {
     public class DownloadFileResult : FileStreamResult
     {

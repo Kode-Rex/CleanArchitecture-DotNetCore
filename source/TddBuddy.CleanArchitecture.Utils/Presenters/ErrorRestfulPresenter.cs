@@ -1,12 +1,11 @@
-﻿using CleanArchitecture.Utils.Output;
-using Microsoft.AspNetCore.Mvc;
+﻿using TddBuddy.CleanArchitecture.Utils.Output;
 
-namespace CleanArchitecture.Utils.Presenters
+namespace TddBuddy.CleanArchitecture.Utils.Presenters
 {
     public class ErrorRestfulPresenter<TError> : GenericRestfulPresenter<object, TError>, IRespondWith<TError>
          where TError : class
     {
-        public ErrorRestfulPresenter(Controller controller) : base(controller)
+        public ErrorRestfulPresenter()
         {
             DefaultResponse(presenter => presenter.RespondWithOk());
         }

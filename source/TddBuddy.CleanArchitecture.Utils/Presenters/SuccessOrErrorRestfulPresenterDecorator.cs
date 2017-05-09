@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using CleanArchitecture.Utils.Output;
-using CleanArchitecture.Utils.TOs;
+using TddBuddy.CleanArchitecture.Utils.Output;
+using TddBuddy.CleanArchitecture.Utils.TOs;
 
-namespace CleanArchitecture.Utils.Presenters
+namespace TddBuddy.CleanArchitecture.Utils.Presenters
 {
     public class SuccessOrErrorRestfulPresenterDecorator<TSuccess> : IRespondWithSuccessOrError<TSuccess, ErrorOutputTo>
         where TSuccess : class
@@ -16,7 +16,7 @@ namespace CleanArchitecture.Utils.Presenters
 
         public void Respond(ErrorOutputTo output)
         {
-            _restfulPresenter.RespondWithUnprocessableEntity(output.Errors);
+            _restfulPresenter.RespondWithUnprocessableEntity(output.FetchErrors());
         }
 
         public void Respond(TSuccess output)

@@ -2,23 +2,29 @@
 using System.Linq;
 using Newtonsoft.Json;
 
-namespace CleanArchitecture.Utils.TOs
+namespace TddBuddy.CleanArchitecture.Utils.TOs
 {
     public class ErrorOutputTo
     {
+        private List<string> Errors { get; }
+
+        [JsonIgnore]
+        public bool HasErrors => Errors.Any();
+
+
         public ErrorOutputTo()
         {
             Errors = new List<string>();
         }
 
-        public List<string> Errors { get; set; }
-
-        [JsonIgnore]
-        public bool HasErrors => Errors.Any();
-
         public void AddError(string error)
         {
             Errors.Add(error);
+        }
+
+        public List<string> FetchErrors()
+        {
+            return Errors;
         }
     }
 }

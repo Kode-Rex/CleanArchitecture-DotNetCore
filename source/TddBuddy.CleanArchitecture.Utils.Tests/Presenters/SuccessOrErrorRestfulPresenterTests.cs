@@ -1,11 +1,10 @@
-﻿using CleanArchitecture.Utils.HttpResponses;
-using CleanArchitecture.Utils.Presenters;
-using CleanArchitecture.Utils.TOs;
-using Microsoft.AspNetCore.Mvc;
-using NSubstitute;
+﻿using Microsoft.AspNetCore.Mvc;
+using TddBuddy.CleanArchitecture.Utils.HttpResponses;
+using TddBuddy.CleanArchitecture.Utils.Presenters;
+using TddBuddy.CleanArchitecture.Utils.TOs;
 using Xunit;
 
-namespace Tddbuddy.CleanArchitecture.Utils.Tests
+namespace Tddbuddy.CleanArchitecture.Utils.Tests.Presenters
 {
     public class SuccessOrErrorRestfulPresenterTests
     {
@@ -39,8 +38,7 @@ namespace Tddbuddy.CleanArchitecture.Utils.Tests
 
         private SuccessOrErrorRestfulPresenter<object, ErrorOutputTo> CreatePresenter()
         {
-            var apiController = Substitute.For<Controller>();
-            return new SuccessOrErrorRestfulPresenter<object, ErrorOutputTo>(apiController);
+            return new SuccessOrErrorRestfulPresenter<object, ErrorOutputTo>();
         }
     }
 }

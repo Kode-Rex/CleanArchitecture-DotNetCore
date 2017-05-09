@@ -1,10 +1,10 @@
 ﻿using System;
-using CleanArchitecture.Utils.HttpResponses;
-using CleanArchitecture.Utils.Output;
-using CleanArchitecture.Utils.TOs;
 using Microsoft.AspNetCore.Mvc;
+using TddBuddy.CleanArchitecture.Utils.HttpResponses;
+using TddBuddy.CleanArchitecture.Utils.Output;
+using TddBuddy.CleanArchitecture.Utils.TOs;
 
-namespace CleanArchitecture.Utils.Presenters
+namespace TddBuddy.CleanArchitecture.Utils.Presenters
 {
     public class DownloadFilePresenter : IRespondWithSuccessOrError<IFileOutput, ErrorOutputTo>, IRespondWith<IFileOutput>
     {

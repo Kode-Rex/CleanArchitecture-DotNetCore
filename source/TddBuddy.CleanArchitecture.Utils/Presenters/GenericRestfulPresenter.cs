@@ -1,24 +1,18 @@
 ﻿using System;
-using CleanArchitecture.Utils.HttpResponses;
 using Microsoft.AspNetCore.Mvc;
+using TddBuddy.CleanArchitecture.Utils.HttpResponses;
 
-namespace CleanArchitecture.Utils.Presenters
+namespace TddBuddy.CleanArchitecture.Utils.Presenters
 {
     public class GenericRestfulPresenter<TOkContent, TUnprocessableEntity>
         where TOkContent : class
         where TUnprocessableEntity : class
     {
-        private readonly Controller _controller;
         private TOkContent _okContent;
         private TUnprocessableEntity _unprocessableEntityContent;
         private bool _blankOkResponse;
         private Action<GenericRestfulPresenter<TOkContent, TUnprocessableEntity>> _defaultResponse;
         private TUnprocessableEntity _forbiddenContent;
-
-        public GenericRestfulPresenter(Controller controller)
-        {
-            _controller = controller;
-        }
 
         public GenericRestfulPresenter<TOkContent, TUnprocessableEntity> DefaultResponse(Action<GenericRestfulPresenter<TOkContent, TUnprocessableEntity>> defaultResponse)
         {

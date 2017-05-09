@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.Utils.Output
+﻿namespace TddBuddy.CleanArchitecture.Utils.Output
 {
     public interface IRespondWith<in T>
     {

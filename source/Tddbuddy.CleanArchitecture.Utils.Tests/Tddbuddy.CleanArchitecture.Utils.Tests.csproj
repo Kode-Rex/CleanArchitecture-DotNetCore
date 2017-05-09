@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\Systems\CleanArchitectureUtils\source\CleanArchitecture.Utils\CleanArchitecture.Utils.csproj" />
+    <ProjectReference Include="..\TddBuddy.CleanArchitecture.Utils\TddBuddy.CleanArchitecture.Utils.csproj" />
   </ItemGroup>
 
   <ItemGroup>
