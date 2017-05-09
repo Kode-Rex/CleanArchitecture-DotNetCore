@@ -8,8 +8,8 @@
     <Description>A set of .net utilities to make it simple to implement the clean architecture. Mainly file, error and JSON object presenters.</Description>
     <AssemblyName>TddBuddy.CleanArchitecture.Utils</AssemblyName>
     <RootNamespace>TddBuddy.CleanArchitecture.Utils</RootNamespace>
-    <PackageId>TddBuddy-CleanArchitecture-Utils</PackageId>
-    <Version>0.9.0</Version>
+    <PackageId>TddBuddy.CleanArchitecture.Utils.DotNetCore</PackageId>
+    <Version>0.9.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
