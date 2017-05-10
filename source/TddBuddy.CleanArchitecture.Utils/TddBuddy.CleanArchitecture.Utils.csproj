@@ -13,43 +13,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="%2a%2a\**" />
-    <EmbeddedResource Remove="%2a%2a\**" />
-    <None Remove="%2a%2a\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Remove="%2a%2a/%2a.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Remove="%2a%2a/%2a.resx" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="%2a%2a/%2a" />
-    <None Remove=".gitattributes" />
-    <None Remove=".gitignore" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="HttpResponses\DownloadFileResult.cs" />
-    <Compile Include="HttpResponses\ForbiddenEntityResult.cs" />
-    <Compile Include="HttpResponses\UnprocessasbleEntityResult.cs" />
-    <Compile Include="Output\IFileOutput.cs" />
-    <Compile Include="Output\IRespondWith.cs" />
-    <Compile Include="Output\IRespondWithSuccessOrError.cs" />
-    <Compile Include="Presenters\DownloadFilePresenter.cs" />
-    <Compile Include="Presenters\ErrorRestfulPresenter.cs" />
-    <Compile Include="Presenters\GenericRestfulPresenter.cs" />
-    <Compile Include="Presenters\PropertyPresenter.cs" />
-    <Compile Include="Presenters\SuccessOrErrorRestfulPresenter.cs" />
-    <Compile Include="Presenters\SuccessOrErrorRestfulPresenterDecorator.cs" />
-    <Compile Include="TOs\ErrorOutputTo.cs" />
-    <Compile Include="TOs\InMemoryFileOutputTo.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.2" />
     <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
