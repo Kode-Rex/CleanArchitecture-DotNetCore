@@ -53,3 +53,4 @@ source/Tddbuddy.CleanArchitecture.Utils.Tests/obj/Tddbuddy.CleanArchitecture.Uti
 source/Tddbuddy.CleanArchitecture.Utils.Tests/obj/Tddbuddy.CleanArchitecture.Utils.Tests.csproj.nuget.g.targets
 source/Tddbuddy.CleanArchitecture.Utils.Tests/obj/XUnitTestProject1.csproj.nuget.g.props
 source/Tddbuddy.CleanArchitecture.Utils.Tests/obj/XUnitTestProject1.csproj.nuget.g.targets
+**/bin/Debug/*
