@@ -1,6 +1,6 @@
-﻿using TddBuddy.CleanArchitecture.Utils.Output;
+﻿using TddBuddy.CleanArchitecture.Domain.Output;
 
-namespace TddBuddy.CleanArchitecture.Utils.Presenters
+namespace TddBuddy.CleanArchitecture.Presenters
 {
     public class ErrorRestfulPresenter<TError> : GenericRestfulPresenter<object, TError>, IRespondWith<TError>
          where TError : class

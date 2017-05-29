@@ -2,15 +2,14 @@
 using System.Linq;
 using Newtonsoft.Json;
 
-namespace TddBuddy.CleanArchitecture.Utils.TOs
+namespace TddBuddy.CleanArchitecture.Domain.TOs
 {
     public class ErrorOutputTo
     {
-        private List<string> Errors { get; }
+        public List<string> Errors { get; }
 
         [JsonIgnore]
         public bool HasErrors => Errors.Any();
-
 
         public ErrorOutputTo()
         {
@@ -22,9 +21,9 @@ namespace TddBuddy.CleanArchitecture.Utils.TOs
             Errors.Add(error);
         }
 
-        public List<string> FetchErrors()
+        public void AddErrors(List<string> errors)
         {
-            return Errors;
+            Errors.AddRange(errors);
         }
     }
 }

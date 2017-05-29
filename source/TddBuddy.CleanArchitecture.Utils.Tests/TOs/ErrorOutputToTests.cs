@@ -1,7 +1,7 @@
-﻿using TddBuddy.CleanArchitecture.Utils.TOs;
+﻿using TddBuddy.CleanArchitecture.Domain.TOs;
 using Xunit;
 
-namespace Tddbuddy.CleanArchitecture.Utils.Tests.TOs
+namespace Tddbuddy.CleanArchitecture.Tests.TOs
 {
     
     public class ErrorOutputToTests
@@ -13,7 +13,7 @@ namespace Tddbuddy.CleanArchitecture.Utils.Tests.TOs
             //---------------Execute Test ----------------------
             var result = new ErrorOutputTo();
             //---------------Test Result -----------------------
-            Assert.NotNull(result.FetchErrors());
+            Assert.NotNull(result.Errors);
         }
 
         [Fact]

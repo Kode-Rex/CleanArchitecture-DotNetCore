@@ -1,8 +1,8 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
-using TddBuddy.CleanArchitecture.Utils.HttpResponses;
+using TddBuddy.CleanArchitecture.HttpResponses;
 
-namespace TddBuddy.CleanArchitecture.Utils.Presenters
+namespace TddBuddy.CleanArchitecture.Presenters
 {
     public class GenericRestfulPresenter<TOkContent, TUnprocessableEntity>
         where TOkContent : class

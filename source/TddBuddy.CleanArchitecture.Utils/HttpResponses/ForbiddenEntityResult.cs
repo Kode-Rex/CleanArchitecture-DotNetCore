@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace TddBuddy.CleanArchitecture.Utils.HttpResponses
+namespace TddBuddy.CleanArchitecture.HttpResponses
 {
     public class ForbiddenEntityResult<T> : ObjectResult
     {

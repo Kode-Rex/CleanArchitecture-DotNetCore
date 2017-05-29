@@ -1,8 +1,8 @@
-﻿using TddBuddy.CleanArchitecture.Utils.Presenters;
-using TddBuddy.CleanArchitecture.Utils.TOs;
+﻿using TddBuddy.CleanArchitecture.Domain.Presenters;
+using TddBuddy.CleanArchitecture.Domain.TOs;
 using Xunit;
 
-namespace Tddbuddy.CleanArchitecture.Utils.Tests.Presenters
+namespace Tddbuddy.CleanArchitecture.Tests.Presenters
 {
     public class PropertyPresenterTests
     {
