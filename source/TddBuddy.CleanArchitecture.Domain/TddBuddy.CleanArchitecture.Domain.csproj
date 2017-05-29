@@ -6,6 +6,9 @@
     <Authors>TddBuddy</Authors>
     <Company>StoneAge Technologies</Company>
     <Description />
+    <PackageId>TddBuddy.CleanArchitecture.Domain.DotNetCore</PackageId>
+    <Product>TddBuddy.CleanArchitecture.Domain.DotNetCore</Product>
+    <PackageProjectUrl>https://github.com/T-rav/CleanArchitecture-DotNetCore</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
