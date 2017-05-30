@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TddBuddy.CleanArchitecture", "TddBuddy.CleanArchitecture.Utils\TddBuddy.CleanArchitecture.csproj", "{255007EE-8504-44C6-89C2-87B7F37AD077}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TddBuddy.CleanArchitecture", "TddBuddy.CleanArchitecture\TddBuddy.CleanArchitecture.csproj", "{255007EE-8504-44C6-89C2-87B7F37AD077}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tddbuddy.CleanArchitecture.Tests", "Tddbuddy.CleanArchitecture.Utils.Tests\Tddbuddy.CleanArchitecture.Tests.csproj", "{729AD46C-F81B-4424-9387-970007E03123}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tddbuddy.CleanArchitecture.Tests", "Tddbuddy.CleanArchitecture.Tests\Tddbuddy.CleanArchitecture.Tests.csproj", "{729AD46C-F81B-4424-9387-970007E03123}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TddBuddy.CleanArchitecture.Domain", "TddBuddy.CleanArchitecture.Domain\TddBuddy.CleanArchitecture.Domain.csproj", "{D0B18BF6-2960-487B-ABC4-196A4CF381B6}"
 EndProject

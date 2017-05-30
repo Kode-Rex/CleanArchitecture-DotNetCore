@@ -9,7 +9,7 @@
     <AssemblyName>TddBuddy.CleanArchitecture</AssemblyName>
     <RootNamespace>TddBuddy.CleanArchitecture</RootNamespace>
     <PackageId>TddBuddy.CleanArchitecture.DotNetCore</PackageId>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <AssemblyVersion>1.0.1.0</AssemblyVersion>
     <FileVersion>1.0.1.0</FileVersion>
     <Product>TddBuddy.CleanArchitecture.DotNetCore</Product>

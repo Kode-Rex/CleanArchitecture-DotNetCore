@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TddBuddy.CleanArchitecture.Utils\TddBuddy.CleanArchitecture.csproj" />
+    <ProjectReference Include="..\TddBuddy.CleanArchitecture\TddBuddy.CleanArchitecture.csproj" />
   </ItemGroup>
 
   <ItemGroup>
