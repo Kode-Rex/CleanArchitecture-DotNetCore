@@ -1,7 +1,7 @@
 ﻿using TddBuddy.CleanArchitecture.Domain.TOs;
 using Xunit;
 
-namespace Tddbuddy.CleanArchitecture.Tests.TOs
+namespace TddBuddy.CleanArchitecture.Domain.Tests.TOs
 {
     
     public class ErrorOutputToTests

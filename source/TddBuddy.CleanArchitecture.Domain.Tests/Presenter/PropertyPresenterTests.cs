@@ -2,7 +2,7 @@
 using TddBuddy.CleanArchitecture.Domain.TOs;
 using Xunit;
 
-namespace Tddbuddy.CleanArchitecture.Tests.Presenters
+namespace TddBuddy.CleanArchitecture.Domain.Tests.Presenter
 {
     public class PropertyPresenterTests
     {

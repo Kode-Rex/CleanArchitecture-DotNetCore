@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using Microsoft.AspNetCore.Mvc;
 
 namespace TddBuddy.CleanArchitecture.HttpResponses
@@ -7,6 +8,11 @@ namespace TddBuddy.CleanArchitecture.HttpResponses
     {
         public DownloadFileResult(Stream fileStream, string contentType, string fileDownloadName) : base(fileStream, contentType)
         {
+            if (string.IsNullOrWhiteSpace(fileDownloadName))
+            {
+                throw new ArgumentNullException(nameof(fileDownloadName));
+            }
+
             FileDownloadName = fileDownloadName;
         }
     }
