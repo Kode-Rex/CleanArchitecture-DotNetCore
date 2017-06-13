@@ -1,6 +1,6 @@
 ﻿using System;
+using TddBuddy.CleanArchitecture.Domain.Messages;
 using TddBuddy.CleanArchitecture.Domain.Output;
-using TddBuddy.CleanArchitecture.Domain.TOs;
 using TddBuddy.CleanArchitecture.HttpResponses;
 using TddBuddy.CleanArchitecture.Presenters;
 using Xunit;
@@ -38,7 +38,7 @@ namespace Tddbuddy.CleanArchitecture.Tests.Presenters
             var presenter = CreatePresenter();
             presenter.Respond(errorOutput);
             //---------------Execute Test ----------------------
-            var result = presenter.Render() as UnprocessasbleEntityResult<ErrorOutputTo>;
+            var result = presenter.Render() as UnprocessasbleEntityResult<ErrorOutputMessage>;
             //---------------Test Result -----------------------
             Assert.NotNull(result);
             Assert.Equal(errorOutput, result.Value);
@@ -71,14 +71,14 @@ namespace Tddbuddy.CleanArchitecture.Tests.Presenters
             Assert.Equal("No response specified", exception.Message);
         }
 
-        private ErrorOutputTo CreateErrorResult()
+        private ErrorOutputMessage CreateErrorResult()
         {
-            return new ErrorOutputTo();
+            return new ErrorOutputMessage();
         }
 
         private IFileOutput CreateFileResult(string fileName, byte[] bytes, string contentType)
         {
-            var result = new InMemoryFileOutputTo(fileName, bytes, contentType);
+            var result = new InMemoryFileOutputMessage(fileName, bytes, contentType);
             return result;
         }
 

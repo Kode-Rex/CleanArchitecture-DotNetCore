@@ -1,10 +1,10 @@
-﻿using TddBuddy.CleanArchitecture.Domain.Output;
-using TddBuddy.CleanArchitecture.Domain.TOs;
+﻿using TddBuddy.CleanArchitecture.Domain.Messages;
+using TddBuddy.CleanArchitecture.Domain.Output;
 
 namespace TddBuddy.CleanArchitecture.Domain
 {
-    public interface IAction<IItOutputTo>
+    public interface IAction<IItOutputMessage>
     {
-        void Execute(IRespondWithSuccessOrError<IItOutputTo, ErrorOutputTo> presenter);
+        void Execute(IRespondWithSuccessOrError<IItOutputMessage, ErrorOutputMessage> presenter);
     }
 }

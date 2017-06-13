@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
+using TddBuddy.CleanArchitecture.Domain.Messages;
 using TddBuddy.CleanArchitecture.Domain.Output;
-using TddBuddy.CleanArchitecture.Domain.TOs;
 
 namespace TddBuddy.CleanArchitecture.Presenters
 {
-    public class SuccessOrErrorRestfulPresenterDecorator<TSuccess> : IRespondWithSuccessOrError<TSuccess, ErrorOutputTo>
+    public class SuccessOrErrorRestfulPresenterDecorator<TSuccess> : IRespondWithSuccessOrError<TSuccess, ErrorOutputMessage>
         where TSuccess : class
     {
         private readonly GenericRestfulPresenter<TSuccess, List<string>> _restfulPresenter;
@@ -14,7 +14,7 @@ namespace TddBuddy.CleanArchitecture.Presenters
             _restfulPresenter = restfulPresenter;
         }
 
-        public void Respond(ErrorOutputTo output)
+        public void Respond(ErrorOutputMessage output)
         {
             _restfulPresenter.RespondWithUnprocessableEntity(output.Errors);
         }

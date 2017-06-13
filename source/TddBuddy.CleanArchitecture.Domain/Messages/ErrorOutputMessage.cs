@@ -2,16 +2,16 @@
 using System.Linq;
 using Newtonsoft.Json;
 
-namespace TddBuddy.CleanArchitecture.Domain.TOs
+namespace TddBuddy.CleanArchitecture.Domain.Messages
 {
-    public class ErrorOutputTo
+    public class ErrorOutputMessage
     {
         public List<string> Errors { get; }
 
         [JsonIgnore]
         public bool HasErrors => Errors.Any();
 
-        public ErrorOutputTo()
+        public ErrorOutputMessage()
         {
             Errors = new List<string>();
         }

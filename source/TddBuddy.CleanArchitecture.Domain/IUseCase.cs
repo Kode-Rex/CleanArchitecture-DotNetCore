@@ -1,10 +1,10 @@
-﻿using TddBuddy.CleanArchitecture.Domain.Output;
-using TddBuddy.CleanArchitecture.Domain.TOs;
+﻿using TddBuddy.CleanArchitecture.Domain.Messages;
+using TddBuddy.CleanArchitecture.Domain.Output;
 
 namespace TddBuddy.CleanArchitecture.Domain
 {
-    public interface IUseCase<in TInputTo, out TItOutputTo>
+    public interface IUseCase<in TInputMessage, out TItOutputMessage>
     {
-        void Execute(TInputTo inputTo, IRespondWithSuccessOrError<TItOutputTo, ErrorOutputTo> presenter);
+        void Execute(TInputMessage inputTo, IRespondWithSuccessOrError<TItOutputMessage, ErrorOutputMessage> presenter);
     }
 }
