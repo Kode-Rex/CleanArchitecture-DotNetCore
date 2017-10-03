@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>TddBuddy</Authors>
     <Company>StoneAge Technologies</Company>
@@ -9,8 +9,9 @@
     <PackageId>TddBuddy.CleanArchitecture.Domain.DotNetCore</PackageId>
     <Product>TddBuddy.CleanArchitecture.Domain.DotNetCore</Product>
     <PackageProjectUrl>https://github.com/T-rav/CleanArchitecture-DotNetCore</PackageProjectUrl>
-    <Version>2.0.0</Version>
+    <Version>3.0.0</Version>
     <PackageTags>DotNetCore CleanArchitecture</PackageTags>
+    <PackageReleaseNotes>Now targets DotNetCore 2.0</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
