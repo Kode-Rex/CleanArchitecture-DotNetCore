@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
 using TddBuddy.CleanArchitecture.Domain.Messages;
 using TddBuddy.CleanArchitecture.HttpResponses;
 using TddBuddy.CleanArchitecture.Presenters;
@@ -9,14 +9,14 @@ namespace Tddbuddy.CleanArchitecture.Tests.Presenters
     public class ErrorRestfulPresenterTests
     {
         [Fact]
-        public void Render_GivenNoResponse_ShouldReturnOkResult()
+        public void Render_GivenNoResponse_ShouldThrowInvalidOperationException()
         {
             //---------------Set up test pack-------------------
             var presenter = CreatePresenter();
             //---------------Execute Test ----------------------
-            var result = presenter.Render() as OkResult;
+            var result = Assert.Throws<InvalidOperationException>(() => presenter.Render());
             //---------------Test Result -----------------------
-            Assert.NotNull(result);
+            Assert.Equal("No response specified.", result.Message);
         }
 
         [Fact]

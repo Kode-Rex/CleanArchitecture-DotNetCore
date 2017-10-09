@@ -15,7 +15,10 @@ namespace Tddbuddy.CleanArchitecture.Tests.Presenters
             //---------------Set up test pack-------------------
             var fileName = "testFile";
             var contextType = "application/json";
-            var bytes = new byte[15];
+            var streamSize = 15;
+            var bytes = CreateBytes(streamSize);
+
+            var resultStream = new byte[streamSize];
             var fileOutput = CreateFileResult(fileName, bytes, contextType);
 
             var presenter = CreatePresenter();
@@ -23,10 +26,9 @@ namespace Tddbuddy.CleanArchitecture.Tests.Presenters
             //---------------Execute Test ----------------------
             var result = presenter.Render() as DownloadFileResult;
             //---------------Test Result -----------------------
-            Assert.NotNull(result);
             Assert.Equal(fileName, result.FileDownloadName);
             Assert.Equal(contextType, result.ContentType);
-            // todo : assert stream content
+            AssertFileStreamCorrect(streamSize, result, resultStream, bytes);
         }
 
         [Fact]
@@ -69,6 +71,22 @@ namespace Tddbuddy.CleanArchitecture.Tests.Presenters
             var exception = Assert.Throws<InvalidOperationException>(() => presenter.Render());
             //---------------Test Result -----------------------
             Assert.Equal("No response specified", exception.Message);
+        }
+
+        private static void AssertFileStreamCorrect(int streamSize, DownloadFileResult result, byte[] resultStream,
+            byte[] bytes)
+        {
+            Assert.Equal(streamSize, result.FileStream.Length);
+            result.FileStream.Read(resultStream, 0, streamSize);
+            Assert.Equal(bytes, resultStream);
+        }
+
+        private static byte[] CreateBytes(int streamSize)
+        {
+            var bytes = new byte[streamSize];
+            bytes[3] = 42;
+            bytes[9] = 42;
+            return bytes;
         }
 
         private ErrorOutputMessage CreateErrorResult()

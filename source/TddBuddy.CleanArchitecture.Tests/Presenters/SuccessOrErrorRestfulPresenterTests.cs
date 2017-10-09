@@ -23,6 +23,18 @@ namespace Tddbuddy.CleanArchitecture.Tests.Presenters
         }
 
         [Fact]
+        public void Render_GivenSuccessfullEmptyResponse_ShouldReturnOkWithoutContent()
+        {
+            //---------------Set up test pack-------------------
+            var presenter = CreatePresenter();
+            presenter.Respond();
+            //---------------Execute Test ----------------------
+            var result = presenter.Render() as OkResult;
+            //---------------Test Result -----------------------
+            Assert.NotNull(result);
+        }
+
+        [Fact]
         public void Render_GivenErrorResponse_ShouldReturnUnprocessableEntityResultWithContent()
         {
             //---------------Set up test pack-------------------
