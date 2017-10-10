@@ -6,20 +6,18 @@ using Xunit;
 
 namespace Tddbuddy.CleanArchitecture.Tests.Presenters
 {
-    public class SuccessOrErrorRestfulPresenterTests
+    public class ResultFreeSuccessOrErrorRestfulPresenterTests
     {
         [Fact]
-        public void Render_GivenSuccessfullResponse_ShouldReturnOkResultWithContent()
+        public void Render_GivenSuccessfullEmptyResponse_ShouldReturnOkWithoutContent()
         {
             //---------------Set up test pack-------------------
-            var content = new object();
             var presenter = CreatePresenter();
-            presenter.Respond(content);
+            presenter.Respond();
             //---------------Execute Test ----------------------
-            var result = presenter.Render() as OkObjectResult;
+            var result = presenter.Render() as OkResult;
             //---------------Test Result -----------------------
             Assert.NotNull(result);
-            Assert.Equal(content, result.Value);
         }
 
         [Fact]
@@ -36,9 +34,9 @@ namespace Tddbuddy.CleanArchitecture.Tests.Presenters
             Assert.Equal(content, result.Value);
         }
 
-        private SuccessOrErrorRestfulPresenter<object, ErrorOutputMessage> CreatePresenter()
+        private ResultFreeSuccessOrErrorRestfulPresenter<ErrorOutputMessage> CreatePresenter()
         {
-            return new SuccessOrErrorRestfulPresenter<object, ErrorOutputMessage>();
+            return new ResultFreeSuccessOrErrorRestfulPresenter<ErrorOutputMessage>();
         }
     }
 }

@@ -4,8 +4,7 @@ using TddBuddy.CleanArchitecture.HttpResponses;
 
 namespace TddBuddy.CleanArchitecture.Presenters
 {
-    public class SuccessOrErrorRestfulPresenter<TSuccess, TError> : GenericRestfulPresenter, IRespondWithSuccessOrError<TSuccess, TError>
-        where TSuccess : class
+    public class ResultFreeSuccessOrErrorRestfulPresenter<TError> : GenericRestfulPresenter, IRespondWithNoResultSuccessOrError<TError>
         where TError : class
     {
         public void Respond(TError output)
@@ -13,9 +12,9 @@ namespace TddBuddy.CleanArchitecture.Presenters
             RespondWith(new UnprocessasbleEntityResult<TError>(output));
         }
 
-        public void Respond(TSuccess output)
+        public void Respond()
         {
-            RespondWith(new OkObjectResult(output));
+            RespondWith(new OkResult());
         }
     }
 }

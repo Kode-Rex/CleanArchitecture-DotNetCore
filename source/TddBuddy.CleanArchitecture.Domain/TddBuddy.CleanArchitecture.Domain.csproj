@@ -9,9 +9,9 @@
     <PackageId>TddBuddy.CleanArchitecture.Domain.DotNetCore</PackageId>
     <Product>TddBuddy.CleanArchitecture.Domain.DotNetCore</Product>
     <PackageProjectUrl>https://github.com/T-rav/CleanArchitecture-DotNetCore</PackageProjectUrl>
-    <Version>3.5.0</Version>
+    <Version>3.6.0</Version>
     <PackageTags>DotNetCore CleanArchitecture</PackageTags>
-    <PackageReleaseNotes>Now targets DotNetCore 2.0</PackageReleaseNotes>
+    <PackageReleaseNotes>Added IRespondWithNoResultSuccessOrError</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
