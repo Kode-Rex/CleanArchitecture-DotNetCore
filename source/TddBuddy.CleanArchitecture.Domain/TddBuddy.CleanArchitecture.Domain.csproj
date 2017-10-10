@@ -12,6 +12,7 @@
     <Version>3.6.0</Version>
     <PackageTags>DotNetCore CleanArchitecture</PackageTags>
     <PackageReleaseNotes>Added IRespondWithNoResultSuccessOrError</PackageReleaseNotes>
+    <PackageIconUrl>http://labs.blogs.com/.a/6a00d8341caed853ef0148c74de2c4970c-pi</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>

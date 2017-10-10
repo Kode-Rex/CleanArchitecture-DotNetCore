@@ -16,6 +16,7 @@
     <PackageProjectUrl>https://github.com/T-rav/CleanArchitecture-DotNetCore</PackageProjectUrl>
     <PackageTags>CleanArchitecture DotNetCore</PackageTags>
     <PackageReleaseNotes>Added ResultFreeSuccessOrErrorRestfulPresenter and removed result less Render() on SuccessOrErrorRestfulPresenter</PackageReleaseNotes>
+    <PackageIconUrl>http://www.horn-it.com/wp-content/uploads/2016/11/Layers.jpg</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>
