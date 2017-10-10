@@ -4,7 +4,7 @@ using TddBuddy.CleanArchitecture.HttpResponses;
 
 namespace TddBuddy.CleanArchitecture.Presenters
 {
-    public class SuccessOrErrorRestfulPresenter<TSuccess, TError> : GenericRestfulPresenter, IRespondWithSuccessOrError<TSuccess, TError>
+    public class SuccessOrErrorRestfulPresenter<TSuccess, TError> : GenericRestfulPresenter, IRespondWithSuccessOrError<TSuccess, TError>, IRepsondWithNoContent
         where TSuccess : class
         where TError : class
     {

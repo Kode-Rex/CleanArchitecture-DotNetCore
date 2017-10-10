@@ -6,7 +6,7 @@ using TddBuddy.CleanArchitecture.HttpResponses;
 
 namespace TddBuddy.CleanArchitecture.Presenters
 {
-    public class DownloadFilePresenter : IRespondWithSuccessOrError<IFileOutput, ErrorOutputMessage>, IRespondWith<IFileOutput>
+    public class DownloadFilePresenter : IRespondWithSuccessOrError<IFileOutput, ErrorOutputMessage>
     {
         private IFileOutput _fileOutput;
         private ErrorOutputMessage _errorOutput;

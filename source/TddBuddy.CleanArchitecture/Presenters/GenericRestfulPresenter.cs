@@ -5,7 +5,6 @@ namespace TddBuddy.CleanArchitecture.Presenters
 {
     public class GenericRestfulPresenter
     {
-
         private IActionResult _response;
 
         public void RespondWith(IActionResult response)
