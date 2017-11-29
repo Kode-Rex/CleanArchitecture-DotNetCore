@@ -9,9 +9,9 @@
     <PackageId>TddBuddy.CleanArchitecture.Domain.DotNetCore</PackageId>
     <Product>TddBuddy.CleanArchitecture.Domain.DotNetCore</Product>
     <PackageProjectUrl>https://github.com/T-rav/CleanArchitecture-DotNetCore</PackageProjectUrl>
-    <Version>3.6.0</Version>
+    <Version>3.7.0</Version>
     <PackageTags>DotNetCore CleanArchitecture</PackageTags>
-    <PackageReleaseNotes>Added IRespondWithNoResultSuccessOrError</PackageReleaseNotes>
+    <PackageReleaseNotes>Added PdfFileOutput and WordFileOuput to assist with returning download results.</PackageReleaseNotes>
     <PackageIconUrl>http://labs.blogs.com/.a/6a00d8341caed853ef0148c74de2c4970c-pi</PackageIconUrl>
   </PropertyGroup>
 

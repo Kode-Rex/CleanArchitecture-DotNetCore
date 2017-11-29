@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
 
 namespace TddBuddy.CleanArchitecture.Domain.Messages
 {
+    [Obsolete("Use ErrorOuput instead. I found this name to be too verbose.")]
     public class ErrorOutputMessage
     {
         public List<string> Errors { get; }

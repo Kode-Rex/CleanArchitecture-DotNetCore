@@ -9,13 +9,13 @@
     <AssemblyName>TddBuddy.CleanArchitecture</AssemblyName>
     <RootNamespace>TddBuddy.CleanArchitecture</RootNamespace>
     <PackageId>TddBuddy.CleanArchitecture.DotNetCore</PackageId>
-    <Version>3.6.0</Version>
+    <Version>3.7.0</Version>
     <AssemblyVersion>3.6.0.0</AssemblyVersion>
     <FileVersion>3.6.0.0</FileVersion>
     <Product>TddBuddy.CleanArchitecture.DotNetCore</Product>
     <PackageProjectUrl>https://github.com/T-rav/CleanArchitecture-DotNetCore</PackageProjectUrl>
     <PackageTags>CleanArchitecture DotNetCore</PackageTags>
-    <PackageReleaseNotes>Added ResultFreeSuccessOrErrorRestfulPresenter and removed result less Render() on SuccessOrErrorRestfulPresenter</PackageReleaseNotes>
+    <PackageReleaseNotes>Update .Doman, so updating this to keep sync</PackageReleaseNotes>
     <PackageIconUrl>http://www.horn-it.com/wp-content/uploads/2016/11/Layers.jpg</PackageIconUrl>
   </PropertyGroup>
 
@@ -23,7 +23,7 @@
     <PackageReference Include="Microsoft.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
-    <PackageReference Include="TddBuddy.CleanArchitecture.Domain.DotNetCore" Version="3.6.0" />
+    <PackageReference Include="TddBuddy.CleanArchitecture.Domain.DotNetCore" Version="3.7.0" />
   </ItemGroup>
 
 </Project>

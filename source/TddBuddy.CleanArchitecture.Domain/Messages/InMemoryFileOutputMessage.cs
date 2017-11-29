@@ -1,8 +1,10 @@
+using System;
 using System.IO;
 using TddBuddy.CleanArchitecture.Domain.Output;
 
 namespace TddBuddy.CleanArchitecture.Domain.Messages
 {
+    [Obsolete("Use InMemoryFileOutput instead. I found this name to be too verbose.")]
     public class InMemoryFileOutputMessage : IFileOutput
     {
         private readonly byte[] _fileData;
