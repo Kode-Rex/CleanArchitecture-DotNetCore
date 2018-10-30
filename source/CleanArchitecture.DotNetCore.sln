@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TddBuddy.CleanArchitecture", "TddBuddy.CleanArchitecture\TddBuddy.CleanArchitecture.csproj", "{255007EE-8504-44C6-89C2-87B7F37AD077}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoneAge.CleanArchitecture.Tests", "StoneAge.CleanArchitecture.Tests\StoneAge.CleanArchitecture.Tests.csproj", "{729AD46C-F81B-4424-9387-970007E03123}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tddbuddy.CleanArchitecture.Tests", "Tddbuddy.CleanArchitecture.Tests\Tddbuddy.CleanArchitecture.Tests.csproj", "{729AD46C-F81B-4424-9387-970007E03123}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoneAge.CleanArchitecture.Domain", "StoneAge.CleanArchitecture.Domain\StoneAge.CleanArchitecture.Domain.csproj", "{D0B18BF6-2960-487B-ABC4-196A4CF381B6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TddBuddy.CleanArchitecture.Domain", "TddBuddy.CleanArchitecture.Domain\TddBuddy.CleanArchitecture.Domain.csproj", "{D0B18BF6-2960-487B-ABC4-196A4CF381B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoneAge.CleanArchitecture.Domain.Tests", "StoneAge.CleanArchitecture.Domain.Tests\StoneAge.CleanArchitecture.Domain.Tests.csproj", "{7B069CD1-D0F4-4ADB-9E9D-B53B8CC5BF80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TddBuddy.CleanArchitecture.Domain.Tests", "TddBuddy.CleanArchitecture.Domain.Tests\TddBuddy.CleanArchitecture.Domain.Tests.csproj", "{7B069CD1-D0F4-4ADB-9E9D-B53B8CC5BF80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoneAge.CleanArchitecture", "StoneAge.CleanArchitecture\StoneAge.CleanArchitecture.csproj", "{5326B16E-4C65-4607-AE89-EF98B3807825}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{255007EE-8504-44C6-89C2-87B7F37AD077}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{255007EE-8504-44C6-89C2-87B7F37AD077}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{255007EE-8504-44C6-89C2-87B7F37AD077}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{255007EE-8504-44C6-89C2-87B7F37AD077}.Release|Any CPU.Build.0 = Release|Any CPU
 		{729AD46C-F81B-4424-9387-970007E03123}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{729AD46C-F81B-4424-9387-970007E03123}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{729AD46C-F81B-4424-9387-970007E03123}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,8 +29,15 @@ Global
 		{7B069CD1-D0F4-4ADB-9E9D-B53B8CC5BF80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B069CD1-D0F4-4ADB-9E9D-B53B8CC5BF80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B069CD1-D0F4-4ADB-9E9D-B53B8CC5BF80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5326B16E-4C65-4607-AE89-EF98B3807825}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5326B16E-4C65-4607-AE89-EF98B3807825}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5326B16E-4C65-4607-AE89-EF98B3807825}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5326B16E-4C65-4607-AE89-EF98B3807825}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7A1AC3A3-1A47-4D36-8B68-95C1624D61A8}
 	EndGlobalSection
 EndGlobal
