@@ -1,6 +1,6 @@
 ﻿namespace StoneAge.CleanArchitecture.Domain.Output
 {
-    public interface IRespondWithResultOnSuccessHttpStatusCodeOnError<T> : IRespondWith<T>
+    public interface IRespondWithResultOnSuccessHttpStatusCodeOnError<in T> : IRespondWith<T>
     {
         void Respond();
     }

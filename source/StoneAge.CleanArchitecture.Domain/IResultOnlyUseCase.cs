@@ -4,6 +4,6 @@ namespace StoneAge.CleanArchitecture.Domain
 {
     public interface IResultOnlyUseCase<in TInputMessage, out TItOutputMessage>
     {
-        void Execute(TInputMessage inputTo, IRespondWith<TItOutputMessage> presenter);
+        void Execute(TInputMessage inputTo, IRespondWithResultOnSuccessHttpStatusCodeOnError<TItOutputMessage> presenter);
     }
 }
