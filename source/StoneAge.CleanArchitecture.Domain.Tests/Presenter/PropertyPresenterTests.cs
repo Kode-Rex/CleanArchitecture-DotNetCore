@@ -9,71 +9,71 @@ namespace StoneAge.CleanArchitecture.Domain.Tests.Presenter
         [Fact]
         public void IsErrorResponse_WhenNoErrors_ShouldReturnFalse()
         {
-            //---------------Set up test pack-------------------
+            //---------------Arrange-------------------
             var presenter = new PropertyPresenter<object, ErrorOutput>();
-            //---------------Execute Test ----------------------
+            //---------------Act-------------------
             var result = presenter.IsErrorResponse();
-            //---------------Test Result -----------------------
+            //---------------Assert-------------------
             Assert.False(result);
         }
 
         [Fact]
         public void IsErrorResponse_WhenErrors_ShouldReturnTrue()
         {
-            //---------------Set up test pack-------------------
+            //---------------Arrange-------------------
             var presenter = new PropertyPresenter<object, ErrorOutput>();
             presenter.Respond(new ErrorOutput());
-            //---------------Execute Test ----------------------
+            //---------------Act-------------------
             var result = presenter.IsErrorResponse();
-            //---------------Test Result -----------------------
+            //---------------Assert-------------------
             Assert.True(result);
         }
 
         [Fact]
         public void ErrorContent_WhenErrors_ShouldReturnErrorTo()
         {
-            //---------------Set up test pack-------------------
+            //---------------Arrange-------------------
             var errors = new ErrorOutput();
             var presenter = new PropertyPresenter<object, ErrorOutput>();
             presenter.Respond(errors);
-            //---------------Execute Test ----------------------
+            //---------------Act-------------------
             var result = presenter.ErrorContent;
-            //---------------Test Result -----------------------
+            //---------------Assert-------------------
             Assert.Equal(errors, result);
         }
 
         [Fact]
         public void ErrorContent_WhenNoErrors_ShouldReturnNull()
         {
-            //---------------Set up test pack-------------------
+            //---------------Arrange-------------------
             var presenter = new PropertyPresenter<object, ErrorOutput>();
-            //---------------Execute Test ----------------------
+            //---------------Act-------------------
             var result = presenter.ErrorContent;
-            //---------------Test Result -----------------------
+            //---------------Assert-------------------
             Assert.Null(result);
         }
 
         [Fact]
         public void SuccessContent_WhenSet_ShouldReturnObject()
         {
-            //---------------Set up test pack-------------------
+            //---------------Arrange-------------------
             var respondWith = new object();
             var presenter = new PropertyPresenter<object, ErrorOutput>();
             presenter.Respond(respondWith);
-            //---------------Execute Test ----------------------
+            //---------------Act-------------------
             var result = presenter.SuccessContent;
-            //---------------Test Result -----------------------
+            //---------------Assert-------------------
             Assert.Equal(respondWith, result);
         }
 
         [Fact]
         public void SuccessContent_WhenNotSet_ShouldReturnNull()
         {
-            //---------------Set up test pack-------------------
+            //---------------Arrange-------------------
             var presenter = new PropertyPresenter<object, ErrorOutput>();
-            //---------------Execute Test ----------------------
+            //---------------Act-------------------
             var result = presenter.SuccessContent;
-            //---------------Test Result -----------------------
+            //---------------Assert-------------------
             Assert.Null(result);
         }
     }

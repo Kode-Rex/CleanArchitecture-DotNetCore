@@ -11,13 +11,13 @@ namespace StoneAge.CleanArchitecture.Tests.Presenters
         [Fact]
         public void Render_GivenSuccessfullResponse_ShouldReturnOkResultWithContent()
         {
-            //---------------Set up test pack-------------------
+            //---------------Arrange-------------------
             var content = new object();
             var presenter = CreatePresenter();
             presenter.Respond(content);
-            //---------------Execute Test ----------------------
+            //---------------Act-------------------
             var result = presenter.Render() as OkObjectResult;
-            //---------------Test Result -----------------------
+            //---------------Assert-------------------
             Assert.NotNull(result);
             Assert.Equal(content, result.Value);
         }
@@ -25,13 +25,13 @@ namespace StoneAge.CleanArchitecture.Tests.Presenters
         [Fact]
         public void Render_GivenErrorResponse_ShouldReturnUnprocessableEntityResultWithContent()
         {
-            //---------------Set up test pack-------------------
+            //---------------Arrange-------------------
             var content = new ErrorOutput();
             var presenter = CreatePresenter();
             presenter.Respond(content);
-            //---------------Execute Test ----------------------
+            //---------------Act-------------------
             var result = presenter.Render() as UnprocessasbleEntityResult<ErrorOutput>;
-            //---------------Test Result -----------------------
+            //---------------Assert-------------------
             Assert.NotNull(result);
             Assert.Equal(content, result.Value);
         }

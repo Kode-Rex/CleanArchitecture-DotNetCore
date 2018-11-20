@@ -1,8 +1,9 @@
 using System.IO;
+using StoneAge.CleanArchitecture.Domain.Output;
 
 namespace StoneAge.CleanArchitecture.Domain.Messages
 {
-    public class InMemoryFileOutput 
+    public class InMemoryFileOutput : IFileOutput
     {
         private readonly byte[] _fileData;
         public string FileName { get; }

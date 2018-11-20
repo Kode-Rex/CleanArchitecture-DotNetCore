@@ -11,24 +11,24 @@ namespace StoneAge.CleanArchitecture.Tests.Presenters
         [Fact]
         public void Render_GivenNoResponse_ShouldThrowInvalidOperationException()
         {
-            //---------------Set up test pack-------------------
+            //---------------Arrange-------------------
             var presenter = CreatePresenter();
-            //---------------Execute Test ----------------------
+            //---------------Act-------------------
             var result = Assert.Throws<InvalidOperationException>(() => presenter.Render());
-            //---------------Test Result -----------------------
+            //---------------Assert-------------------
             Assert.Equal("No response specified.", result.Message);
         }
 
         [Fact]
         public void Render_GivenErrorResponse_ShouldReturnUnprocessableEntityResultWithContent()
         {
-            //---------------Set up test pack-------------------
+            //---------------Arrange-------------------
             var content = new ErrorOutput();
             var presenter = CreatePresenter();
             presenter.Respond(content);
-            //---------------Execute Test ----------------------
+            //---------------Act-------------------
             var result = presenter.Render() as UnprocessasbleEntityResult<ErrorOutput>;
-            //---------------Test Result -----------------------
+            //---------------Assert-------------------
             Assert.NotNull(result);
             Assert.Equal(content, result.Value);
         }

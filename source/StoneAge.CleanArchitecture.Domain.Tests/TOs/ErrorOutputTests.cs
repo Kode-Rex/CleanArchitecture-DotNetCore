@@ -9,33 +9,33 @@ namespace StoneAge.CleanArchitecture.Domain.Tests.TOs
         [Fact]
         public void FetchErrors_WhenConstructed_ShouldReturnList()
         {
-            //---------------Set up test pack-------------------
-            //---------------Execute Test ----------------------
+            //---------------Arrange-------------------
+            //---------------Act-------------------
             var result = new ErrorOutput();
-            //---------------Test Result -----------------------
+            //---------------Assert-------------------
             Assert.NotNull(result.Errors);
         }
 
         [Fact]
         public void HasErrors_WhenNoErrors_ShouldReturnFalse()
         {
-            //---------------Set up test pack-------------------
+            //---------------Arrange-------------------
             var errorOutputTo = new ErrorOutput();
-            //---------------Execute Test ----------------------
+            //---------------Act-------------------
             var result = errorOutputTo.HasErrors;
-            //---------------Test Result -----------------------
+            //---------------Assert-------------------
             Assert.False(result);
         }
 
         [Fact]
         public void HasErrors_WhenErrors_ShouldReturnTrue()
         {
-            //---------------Set up test pack-------------------
+            //---------------Arrange-------------------
             var errorOutputTo = new ErrorOutput();
             errorOutputTo.AddError("test error");
-            //---------------Execute Test ----------------------
+            //---------------Act-------------------
             var result = errorOutputTo.HasErrors;
-            //---------------Test Result -----------------------
+            //---------------Assert-------------------
             Assert.True(result);
         }
     }

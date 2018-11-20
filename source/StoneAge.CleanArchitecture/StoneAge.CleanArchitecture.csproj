@@ -9,13 +9,13 @@
     <AssemblyName>StoneAge.CleanArchitecture</AssemblyName>
     <RootNamespace>StoneAge.CleanArchitecture</RootNamespace>
     <PackageId>StoneAge.CleanArchitecture.DotNetCore</PackageId>
-    <Version>3.7.0</Version>
-    <AssemblyVersion>3.7.0.0</AssemblyVersion>
-    <FileVersion>3.7.0.0</FileVersion>
+    <Version>3.7.2</Version>
+    <AssemblyVersion>3.7.2.0</AssemblyVersion>
+    <FileVersion>3.7.2.0</FileVersion>
     <Product>StoneAge.CleanArchitecture.DotNetCore</Product>
     <PackageProjectUrl>https://github.com/StoneAgeTechnologies/CleanArchitecture-DotNetCore</PackageProjectUrl>
     <PackageTags>CleanArchitecture DotNetCore</PackageTags>
-    <PackageReleaseNotes>TddBuddy to StoneAge port</PackageReleaseNotes>
+    <PackageReleaseNotes>Added SuccessOrUnauthorizedPresenter</PackageReleaseNotes>
     <PackageIconUrl>http://www.horn-it.com/wp-content/uploads/2016/11/Layers.jpg</PackageIconUrl>
   </PropertyGroup>
 

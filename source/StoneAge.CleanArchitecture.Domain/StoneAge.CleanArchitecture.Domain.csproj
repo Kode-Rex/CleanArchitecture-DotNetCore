@@ -9,10 +9,12 @@
     <PackageId>StoneAge.CleanArchitecture.Domain.DotNetCore</PackageId>
     <Product>StoneAge.CleanArchitecture.Domain.DotNetCore</Product>
     <PackageProjectUrl>https://github.com/StoneAgeTechnologies/CleanArchitecture-DotNetCore</PackageProjectUrl>
-    <Version>3.7.1</Version>
+    <Version>3.7.2</Version>
     <PackageTags>DotNetCore CleanArchitecture</PackageTags>
     <PackageReleaseNotes>TddBuddy to StoneAge port + removed all the ErrorOutputMessage references</PackageReleaseNotes>
     <PackageIconUrl>http://labs.blogs.com/.a/6a00d8341caed853ef0148c74de2c4970c-pi</PackageIconUrl>
+    <AssemblyVersion>3.7.2.0</AssemblyVersion>
+    <FileVersion>3.7.2.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.AspNetCore.Mvc;
 using StoneAge.CleanArchitecture.Domain.Messages;
 using StoneAge.CleanArchitecture.Domain.Output;
 using StoneAge.CleanArchitecture.HttpResponses;
@@ -12,7 +13,7 @@ namespace StoneAge.CleanArchitecture.Tests.Presenters
         [Fact]
         public void Render_GivenFileResponse_ShouldReturnDownloadFileResult()
         {
-            //---------------Set up test pack-------------------
+            //---------------Arrange-------------------
             var fileName = "testFile";
             var contextType = "application/json";
             var streamSize = 15;
@@ -23,9 +24,9 @@ namespace StoneAge.CleanArchitecture.Tests.Presenters
 
             var presenter = CreatePresenter();
             presenter.Respond(fileOutput);
-            //---------------Execute Test ----------------------
+            //---------------Act-------------------
             var result = presenter.Render() as DownloadFileResult;
-            //---------------Test Result -----------------------
+            //---------------Assert-------------------
             Assert.Equal(fileName, result.FileDownloadName);
             Assert.Equal(contextType, result.ContentType);
             AssertFileStreamCorrect(streamSize, result, resultStream, bytes);
@@ -34,14 +35,14 @@ namespace StoneAge.CleanArchitecture.Tests.Presenters
         [Fact]
         public void Render_GivenErrorResponse_ShouldReturnUnprocessibleEntity()
         {
-            //---------------Set up test pack-------------------
+            //---------------Arrange-------------------
             var errorOutput = CreateErrorResult();
 
             var presenter = CreatePresenter();
             presenter.Respond(errorOutput);
-            //---------------Execute Test ----------------------
+            //---------------Act-------------------
             var result = presenter.Render() as UnprocessasbleEntityResult<ErrorOutput>;
-            //---------------Test Result -----------------------
+            //---------------Assert-------------------
             Assert.NotNull(result);
             Assert.Equal(errorOutput, result.Value);
         }
@@ -49,32 +50,31 @@ namespace StoneAge.CleanArchitecture.Tests.Presenters
         [Fact]
         public void Render_GivenFileAndErrorResponse_ShouldThrowException()
         {
-            //---------------Set up test pack-------------------
+            //---------------Arrange-------------------
             var errorOutput = CreateErrorResult();
             var fileOutput = CreateFileResult("fileName", new byte[1], "application/json");
 
             var presenter = CreatePresenter();
             presenter.Respond(errorOutput);
             presenter.Respond(fileOutput);
-            //---------------Execute Test ----------------------
+            //---------------Act-------------------
             var exception = Assert.Throws<InvalidOperationException>(() => presenter.Render());
-            //---------------Test Result -----------------------
+            //---------------Assert-------------------
             Assert.Equal("Only one response allowed", exception.Message);
         }
 
         [Fact]
         public void Render_GivenNoResponse_ShouldThrowException()
         {
-            //---------------Set up test pack-------------------
+            //---------------Arrange-------------------
             var presenter = CreatePresenter();
-            //---------------Execute Test ----------------------
+            //---------------Act-------------------
             var exception = Assert.Throws<InvalidOperationException>(() => presenter.Render());
-            //---------------Test Result -----------------------
+            //---------------Assert-------------------
             Assert.Equal("No response specified", exception.Message);
         }
 
-        private static void AssertFileStreamCorrect(int streamSize, DownloadFileResult result, byte[] resultStream,
-            byte[] bytes)
+        private static void AssertFileStreamCorrect(int streamSize, FileStreamResult result, byte[] resultStream, byte[] bytes)
         {
             Assert.Equal(streamSize, result.FileStream.Length);
             result.FileStream.Read(resultStream, 0, streamSize);
@@ -96,7 +96,7 @@ namespace StoneAge.CleanArchitecture.Tests.Presenters
 
         private IFileOutput CreateFileResult(string fileName, byte[] bytes, string contentType)
         {
-            var result = new InMemoryFileOutputMessage(fileName, bytes, contentType);
+            var result = new InMemoryFileOutput(fileName, bytes, contentType);
             return result;
         }
 
