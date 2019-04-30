@@ -9,7 +9,7 @@ namespace StoneAge.CleanArchitecture.Tests.Presenters
     public class SuccessOrErrorRestfulPresenterTests
     {
         [Fact]
-        public void Render_GivenSuccessfullResponse_ShouldReturnOkResultWithContent()
+        public void Render_GivenSuccessfulResponse_ShouldReturnOkResultWithContent()
         {
             //---------------Arrange-------------------
             var content = new object();

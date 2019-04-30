@@ -4,10 +4,10 @@ using Xunit;
 
 namespace StoneAge.CleanArchitecture.Tests.Presenters
 {
-    public class SucessOrUnauthorizedRestfulPresenterTests
+    public class SuccessOrUnauthorizedRestfulPresenterTests
     {
         [Fact]
-        public void Render_GivenSuccessfullResponse_ShouldReturnOkResultWithContent()
+        public void Render_GivenSuccessfulResponse_ShouldReturnOkResultWithContent()
         {
             //---------------Arrange-------------------
             var content = new object();
