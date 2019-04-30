@@ -28,7 +28,7 @@ namespace StoneAge.CleanArchitecture.Tests.Presenters
             var presenter = CreatePresenter();
             presenter.Respond(content);
             //---------------Act-------------------
-            var result = presenter.Render() as UnprocessasbleEntityResult<ErrorOutput>;
+            var result = presenter.Render() as UnprocessableEntityResult<ErrorOutput>;
             //---------------Assert-------------------
             Assert.NotNull(result);
             Assert.Equal(content, result.Value);

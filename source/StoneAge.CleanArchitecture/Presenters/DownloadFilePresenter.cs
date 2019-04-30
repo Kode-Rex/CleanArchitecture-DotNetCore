@@ -35,7 +35,7 @@ namespace StoneAge.CleanArchitecture.Presenters
 
             if (IsErrorResponse())
             {   
-                return new UnprocessasbleEntityResult<ErrorOutput>(_errorOutput);
+                return new UnprocessableEntityResult<ErrorOutput>(_errorOutput);
             }
 
             return new DownloadFileResult(_fileOutput.GetStream(), _fileOutput.ContentType, _fileOutput.FileName);

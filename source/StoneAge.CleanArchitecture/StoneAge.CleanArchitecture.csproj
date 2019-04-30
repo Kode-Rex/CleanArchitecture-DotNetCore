@@ -9,9 +9,9 @@
     <AssemblyName>StoneAge.CleanArchitecture</AssemblyName>
     <RootNamespace>StoneAge.CleanArchitecture</RootNamespace>
     <PackageId>StoneAge.CleanArchitecture.DotNetCore</PackageId>
-    <Version>3.7.8</Version>
-    <AssemblyVersion>3.7.8.0</AssemblyVersion>
-    <FileVersion>3.7.8.0</FileVersion>
+    <Version>3.7.9</Version>
+    <AssemblyVersion>3.7.9.0</AssemblyVersion>
+    <FileVersion>3.7.9.0</FileVersion>
     <Product>StoneAge.CleanArchitecture.DotNetCore</Product>
     <PackageProjectUrl>https://github.com/StoneAgeTechnologies/CleanArchitecture-DotNetCore</PackageProjectUrl>
     <PackageTags>CleanArchitecture DotNetCore</PackageTags>

@@ -9,12 +9,12 @@
     <PackageId>StoneAge.CleanArchitecture.Domain.DotNetCore</PackageId>
     <Product>StoneAge.CleanArchitecture.Domain.DotNetCore</Product>
     <PackageProjectUrl>https://github.com/StoneAgeTechnologies/CleanArchitecture-DotNetCore</PackageProjectUrl>
-    <Version>3.7.7</Version>
+    <Version>3.7.8</Version>
     <PackageTags>DotNetCore CleanArchitecture</PackageTags>
-    <PackageReleaseNotes>Added ExcelFileOutput message</PackageReleaseNotes>
+    <PackageReleaseNotes>Add IErrorOnlyUseCaseAsync and IErrorOnlyUseCase for when you only want to return 200 on success or error messages</PackageReleaseNotes>
     <PackageIconUrl>https://cdn1.imggmi.com/uploads/2019/3/1/82f11997d33c432f92d56007d7ca9432-full.png</PackageIconUrl>
-    <AssemblyVersion>3.7.7.0</AssemblyVersion>
-    <FileVersion>3.7.7.0</FileVersion>
+    <AssemblyVersion>3.7.8.0</AssemblyVersion>
+    <FileVersion>3.7.8.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

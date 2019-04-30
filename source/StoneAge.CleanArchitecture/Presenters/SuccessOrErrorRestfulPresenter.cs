@@ -10,7 +10,7 @@ namespace StoneAge.CleanArchitecture.Presenters
     {
         public void Respond(TError output)
         {
-            RespondWith(new UnprocessasbleEntityResult<TError>(output));
+            RespondWith(new UnprocessableEntityResult<TError>(output));
         }
 
         public void Respond(TSuccess output)
