@@ -3,22 +3,22 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Authors>TddBuddy</Authors>
+    <Authors>StoneAge Technologies</Authors>
     <Company>StoneAge Technologies</Company>
     <Description>A set of interfaces and messages critical to the Clean Architecture</Description>
     <PackageId>StoneAge.CleanArchitecture.Domain.DotNetCore</PackageId>
     <Product>StoneAge.CleanArchitecture.Domain.DotNetCore</Product>
     <PackageProjectUrl>https://github.com/StoneAgeTechnologies/CleanArchitecture-DotNetCore</PackageProjectUrl>
-    <Version>3.7.8</Version>
+    <Version>3.7.10</Version>
     <PackageTags>DotNetCore CleanArchitecture</PackageTags>
-    <PackageReleaseNotes>Add IErrorOnlyUseCaseAsync and IErrorOnlyUseCase for when you only want to return 200 on success or error messages</PackageReleaseNotes>
+    <PackageReleaseNotes>Added InterUseCasePresenter to help transfer data between two usecases when used in an outer composition usecase.</PackageReleaseNotes>
     <PackageIconUrl>https://cdn1.imggmi.com/uploads/2019/3/1/82f11997d33c432f92d56007d7ca9432-full.png</PackageIconUrl>
-    <AssemblyVersion>3.7.8.0</AssemblyVersion>
-    <FileVersion>3.7.8.0</FileVersion>
+    <AssemblyVersion>3.7.10.0</AssemblyVersion>
+    <FileVersion>3.7.10.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
   </ItemGroup>
 
 </Project>
