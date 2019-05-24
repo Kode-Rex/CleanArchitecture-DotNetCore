@@ -9,16 +9,16 @@
     <PackageId>StoneAge.CleanArchitecture.Domain.DotNetCore</PackageId>
     <Product>StoneAge.CleanArchitecture.Domain.DotNetCore</Product>
     <PackageProjectUrl>https://github.com/StoneAgeTechnologies/CleanArchitecture-DotNetCore</PackageProjectUrl>
-    <Version>3.7.10</Version>
+    <Version>3.8.0</Version>
     <PackageTags>DotNetCore CleanArchitecture</PackageTags>
-    <PackageReleaseNotes>Added InterUseCasePresenter to help transfer data between two usecases when used in an outer composition usecase.</PackageReleaseNotes>
+    <PackageReleaseNotes>Downgraded Newtonsoft.Json to 11.0.2 work with Azure Functions</PackageReleaseNotes>
     <PackageIconUrl>https://cdn1.imggmi.com/uploads/2019/3/1/82f11997d33c432f92d56007d7ca9432-full.png</PackageIconUrl>
-    <AssemblyVersion>3.7.10.0</AssemblyVersion>
-    <FileVersion>3.7.10.0</FileVersion>
+    <AssemblyVersion>3.8.0.0</AssemblyVersion>
+    <FileVersion>3.8.0.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
   </ItemGroup>
 
 </Project>
