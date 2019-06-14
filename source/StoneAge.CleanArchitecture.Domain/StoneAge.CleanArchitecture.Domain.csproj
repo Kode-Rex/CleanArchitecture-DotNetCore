@@ -9,12 +9,12 @@
     <PackageId>StoneAge.CleanArchitecture.Domain.DotNetCore</PackageId>
     <Product>StoneAge.CleanArchitecture.Domain.DotNetCore</Product>
     <PackageProjectUrl>https://github.com/StoneAgeTechnologies/CleanArchitecture-DotNetCore</PackageProjectUrl>
-    <Version>3.8.0</Version>
+    <Version>3.8.1</Version>
     <PackageTags>DotNetCore CleanArchitecture</PackageTags>
-    <PackageReleaseNotes>Downgraded Newtonsoft.Json to 11.0.2 work with Azure Functions</PackageReleaseNotes>
+    <PackageReleaseNotes>Added new constructors for ErrorOutput so single string and List&lt;string&gt; can be passed in</PackageReleaseNotes>
     <PackageIconUrl>https://cdn1.imggmi.com/uploads/2019/3/1/82f11997d33c432f92d56007d7ca9432-full.png</PackageIconUrl>
-    <AssemblyVersion>3.8.0.0</AssemblyVersion>
-    <FileVersion>3.8.0.0</FileVersion>
+    <AssemblyVersion>3.8.1.0</AssemblyVersion>
+    <FileVersion>3.8.1.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

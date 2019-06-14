@@ -16,18 +16,33 @@ namespace StoneAge.CleanArchitecture.Domain.Messages
             Errors = new List<string>();
         }
 
-        public ErrorOutput(string error) : this(new List<string> { error })
+        public ErrorOutput(string error)
         {
+            Errors = new List<string>();
+            if (error != null)
+            {
+                Errors = new List<string>{error};
+            }
         }
 
         public ErrorOutput(List<string> errors)
         {
-            Errors = errors;
+            if (errors != null)
+            {
+                Errors = errors;
+            }
+            else
+            {
+                Errors = new List<string>();
+            }
         }
         
         public void AddError(string error)
         {
-            Errors.Add(error);
+            if (error != null)
+            {
+                Errors.Add(error);
+            }
         }
 
         public void AddErrors(List<string> errors)

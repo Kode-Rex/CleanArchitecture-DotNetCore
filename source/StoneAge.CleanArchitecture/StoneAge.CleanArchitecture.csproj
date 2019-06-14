@@ -9,13 +9,13 @@
     <AssemblyName>StoneAge.CleanArchitecture</AssemblyName>
     <RootNamespace>StoneAge.CleanArchitecture</RootNamespace>
     <PackageId>StoneAge.CleanArchitecture.DotNetCore</PackageId>
-    <Version>3.8.0</Version>
-    <AssemblyVersion>3.8.0.0</AssemblyVersion>
-    <FileVersion>3.8.0.0</FileVersion>
+    <Version>3.8.1</Version>
+    <AssemblyVersion>3.8.1.0</AssemblyVersion>
+    <FileVersion>3.8.1.0</FileVersion>
     <Product>StoneAge.CleanArchitecture.DotNetCore</Product>
     <PackageProjectUrl>https://github.com/StoneAgeTechnologies/CleanArchitecture-DotNetCore</PackageProjectUrl>
     <PackageTags>CleanArchitecture DotNetCore</PackageTags>
-    <PackageReleaseNotes>Downgraded Newtonsoft.Json to 11.0.2 work with Azure Functions</PackageReleaseNotes>
+    <PackageReleaseNotes>Updated dependency on .Domain to allow use of new ErrorOutput constructors</PackageReleaseNotes>
     <PackageIconUrl>https://cdn1.imggmi.com/uploads/2019/3/1/82f11997d33c432f92d56007d7ca9432-full.png</PackageIconUrl>
   </PropertyGroup>
 
@@ -23,7 +23,7 @@
     <PackageReference Include="Microsoft.AspNetCore" Version="2.1.4" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.3" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
-    <PackageReference Include="StoneAge.CleanArchitecture.Domain.DotNetCore" Version="3.8.0" />
+    <PackageReference Include="StoneAge.CleanArchitecture.Domain.DotNetCore" Version="3.8.1" />
   </ItemGroup>
 
 </Project>
