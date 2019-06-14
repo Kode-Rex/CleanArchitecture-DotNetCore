@@ -9,13 +9,22 @@ namespace StoneAge.CleanArchitecture.Domain.Messages
         public List<string> Errors { get; }
 
         [JsonIgnore]
-        public bool HasErrors => Errors.Any();
+        public bool HasErrors => Errors != null && Errors.Any();
 
         public ErrorOutput()
         {
             Errors = new List<string>();
         }
 
+        public ErrorOutput(string error) : this(new List<string> { error })
+        {
+        }
+
+        public ErrorOutput(List<string> errors)
+        {
+            Errors = errors;
+        }
+        
         public void AddError(string error)
         {
             Errors.Add(error);
