@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using FluentAssertions;
+using Microsoft.AspNetCore.Mvc;
 using StoneAge.CleanArchitecture.Presenters;
+using StoneAge.CleanArchitecture.Tests.Presenters.TestObjects;
 using Xunit;
 
 namespace StoneAge.CleanArchitecture.Tests.Presenters
@@ -10,7 +13,12 @@ namespace StoneAge.CleanArchitecture.Tests.Presenters
         public void Render_GivenSuccessfulResponse_ShouldReturnOkResultWithContent()
         {
             //---------------Arrange-------------------
-            var content = new object();
+            var content = new DomainObject
+            {
+                Name = "Travis",
+                Age = 38,
+                FavoriteColor = "Black"
+            };
             var presenter = CreatePresenter();
             presenter.Respond(content);
             //---------------Act-------------------
@@ -18,6 +26,34 @@ namespace StoneAge.CleanArchitecture.Tests.Presenters
             //---------------Assert-------------------
             Assert.NotNull(result);
             Assert.Equal(content, result.Value);
+        }
+
+        [Fact]
+        public void Render_GivenSuccessfulResponse_WithConversionFunction_ShouldReturnOkResultWithConvertedContent()
+        {
+            //---------------Arrange-------------------
+            var content = new DomainObject
+            {
+                Name = "Travis",
+                Age = 38,
+                FavoriteColor = "Black"
+            };
+            Func<DomainObject, object> func = (domainEntity) => new OtherDomainObject
+            {
+                StatedName = domainEntity.Name,
+                StatedAge = domainEntity.Age
+            };
+            var presenter = CreatePresenter(func);
+            presenter.Respond(content);
+            //---------------Act-------------------
+            var result = presenter.Render() as OkObjectResult;
+            //---------------Assert-------------------
+            var expected = new OtherDomainObject
+            {
+                StatedName = "Travis",
+                StatedAge = 38
+            };
+            result.Value.Should().BeEquivalentTo(expected);
         }
 
         [Fact]
@@ -33,9 +69,14 @@ namespace StoneAge.CleanArchitecture.Tests.Presenters
             Assert.Equal(400, result.StatusCode);
         }
 
-        private SuccessOrBadRequestRestfulPresenter<object> CreatePresenter()
+        private SuccessOrBadRequestRestfulPresenter<DomainObject> CreatePresenter()
         {
-            return new SuccessOrBadRequestRestfulPresenter<object>();
+            return new SuccessOrBadRequestRestfulPresenter<DomainObject>();
+        }
+
+        private SuccessOrBadRequestRestfulPresenter<DomainObject> CreatePresenter(Func<DomainObject, object> func)
+        {
+            return new SuccessOrBadRequestRestfulPresenter<DomainObject>(func);
         }
     }
 }

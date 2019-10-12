@@ -9,13 +9,13 @@
     <AssemblyName>StoneAge.CleanArchitecture</AssemblyName>
     <RootNamespace>StoneAge.CleanArchitecture</RootNamespace>
     <PackageId>StoneAge.CleanArchitecture.DotNetCore</PackageId>
-    <Version>3.8.1</Version>
-    <AssemblyVersion>3.8.1.0</AssemblyVersion>
-    <FileVersion>3.8.1.0</FileVersion>
+    <Version>3.8.2</Version>
+    <AssemblyVersion>3.8.2.0</AssemblyVersion>
+    <FileVersion>3.8.2.0</FileVersion>
     <Product>StoneAge.CleanArchitecture.DotNetCore</Product>
     <PackageProjectUrl>https://github.com/StoneAgeTechnologies/CleanArchitecture-DotNetCore</PackageProjectUrl>
     <PackageTags>CleanArchitecture DotNetCore</PackageTags>
-    <PackageReleaseNotes>Updated dependency on .Domain to allow use of new ErrorOutput constructors</PackageReleaseNotes>
+    <PackageReleaseNotes>Added conversion function to SuccessOrXyzPresenters to allow domain entities to be translated at the boundary so you do not have to leak dependecies across the wire.</PackageReleaseNotes>
     <PackageIconUrl>https://cdn1.imggmi.com/uploads/2019/3/1/82f11997d33c432f92d56007d7ca9432-full.png</PackageIconUrl>
   </PropertyGroup>
 
