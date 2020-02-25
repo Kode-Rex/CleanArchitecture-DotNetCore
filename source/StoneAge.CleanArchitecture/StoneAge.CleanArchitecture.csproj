@@ -9,13 +9,13 @@
     <AssemblyName>StoneAge.CleanArchitecture</AssemblyName>
     <RootNamespace>StoneAge.CleanArchitecture</RootNamespace>
     <PackageId>StoneAge.CleanArchitecture.DotNetCore</PackageId>
-    <Version>4.0.0</Version>
-    <AssemblyVersion>4.0.0.0</AssemblyVersion>
-    <FileVersion>4.0.0.0</FileVersion>
+    <Version>4.0.1</Version>
+    <AssemblyVersion>4.0.1.0</AssemblyVersion>
+    <FileVersion>4.0.1.0</FileVersion>
     <Product>StoneAge.CleanArchitecture.DotNetCore</Product>
     <PackageProjectUrl>https://github.com/StoneAgeTechnologies/CleanArchitecture-DotNetCore</PackageProjectUrl>
     <PackageTags>CleanArchitecture DotNetCore</PackageTags>
-    <PackageReleaseNotes>Added in the ability to compose a Saga and SagaSteps to allow for transactions within a usecase and better flexability when composing large logic flows</PackageReleaseNotes>
+    <PackageReleaseNotes>Moved Saga stuff into it's own package</PackageReleaseNotes>
     <PackageIconUrl>https://cdn1.imggmi.com/uploads/2019/3/1/82f11997d33c432f92d56007d7ca9432-full.png</PackageIconUrl>
   </PropertyGroup>
 

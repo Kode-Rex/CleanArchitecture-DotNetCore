@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <Product>StoneAge.CleanArchitecture.Saga</Product>
+    <Company>StoneAge Technologies</Company>
+    <Authors>StoneAge Technologies</Authors>
+    <Description>A set of packages to allow for better usecase compoisition when dealing with large pieces of logic</Description>
+    <PackageProjectUrl>https://github.com/StoneAgeTechnologies/CleanArchitecture-DotNetCore</PackageProjectUrl>
+    <PackageTags>DotNetCore CleanArchitecture</PackageTags>
+    <PackageReleaseNotes>Inital release</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StoneAge.CleanArchitecture.Domain.DotNetCore" Version="4.0.0" />
+  </ItemGroup>
+
+</Project>

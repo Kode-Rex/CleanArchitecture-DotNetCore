@@ -13,7 +13,6 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.1.0" />
     <PackageReference Include="nsubstitute" Version="3.1.0" />
     <PackageReference Include="NUnit" Version="3.12.0" />
-    <PackageReference Include="StoneAge.CleanArchitecture.Domain.DotNetCore" Version="3.8.1" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
       <PrivateAssets>all</PrivateAssets>
@@ -23,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\StoneAge.CleanArchitecture.Domain\StoneAge.CleanArchitecture.Domain.csproj" />
+    <ProjectReference Include="..\StoneAge.CleanArchitecture.Saga\StoneAge.CleanArchitecture.Saga.csproj" />
     <ProjectReference Include="..\StoneAge.CleanArchitecture\StoneAge.CleanArchitecture.csproj" />
   </ItemGroup>
 
