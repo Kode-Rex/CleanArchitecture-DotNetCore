@@ -3,6 +3,7 @@ using StoneAge.CleanArchitecture.Domain.Saga;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace StoneAge.CleanArchitecture.Saga
 {
@@ -27,6 +28,13 @@ namespace StoneAge.CleanArchitecture.Saga
         {
             Steps.Add(new SagaStepContainer<TContext>(step));
             
+            return this;
+        }
+
+        public ISagaStepBuilder<TContext> Using_Step(Func<TContext, Task> internalAction)
+        {
+            var actionStep = new AsyncActionToSagaStep<TContext>(internalAction);
+            Steps.Add(new SagaStepContainer<TContext>(actionStep));
             return this;
         }
 
