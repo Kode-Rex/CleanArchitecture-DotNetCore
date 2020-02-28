@@ -66,5 +66,16 @@ namespace StoneAge.CleanArchitecture.Saga
         {
             return new Saga<TContext>(Context, Steps, successAction, (ErrorOutput err)=> { });
         }
+
+        public ISagaStepBuilder<TContext> With_Error_Behavior(ErrorBehavior errorBehavior)
+        {
+            if (Steps.Any())
+            {
+                var lastStep = Steps.Last();
+                lastStep.OnErrorBehavior = errorBehavior;
+            }
+
+            return this;
+        }
     }
 }

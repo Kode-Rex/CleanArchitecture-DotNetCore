@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoneAge.CleanArchitecture.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoneAge.CleanArchitecture", "StoneAge.CleanArchitecture\StoneAge.CleanArchitecture.csproj", "{5326B16E-4C65-4607-AE89-EF98B3807825}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoneAge.CleanArchitecture.Saga", "StoneAge.CleanArchitecture.Saga\StoneAge.CleanArchitecture.Saga.csproj", "{359C970A-5932-4BCE-A8A8-3E215648698C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoneAge.CleanArchitecture.Saga", "StoneAge.CleanArchitecture.Saga\StoneAge.CleanArchitecture.Saga.csproj", "{359C970A-5932-4BCE-A8A8-3E215648698C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,4 +1,4 @@
-﻿namespace StoneAge.CleanArchitecture.Saga
+﻿namespace StoneAge.CleanArchitecture.Domain.Saga
 {
     public enum ErrorBehavior
     {
