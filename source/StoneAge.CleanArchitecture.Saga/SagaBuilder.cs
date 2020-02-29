@@ -50,8 +50,18 @@ namespace StoneAge.CleanArchitecture.Saga
             if (Steps.Any())
             {
                 var lastStep = Steps.Last();
-                lastStep.OnErrorBehavior = ErrorBehavior.Terminate;
                 lastStep.CompensateAction = compensateAction;
+            }
+
+            return this;
+        }
+
+        public ISagaStepBuilder<TContext> With_Roll_Back_Action_On_Error(Func<TContext, Task> compensateFunc)
+        {
+            if (Steps.Any())
+            {
+                var lastStep = Steps.Last();
+                lastStep.CompensateFunc = compensateFunc;
             }
 
             return this;

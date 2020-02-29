@@ -36,7 +36,7 @@ namespace StoneAge.CleanArchitecture.Saga
                 catch (Exception e)
                 {
                     Log_Execution_Error(result, e);
-                    Run_Compensation_Step(step);
+                    await step.Compensate(Context);
 
                     if (step.OnErrorBehavior == ErrorBehavior.Terminate)
                     {
@@ -56,12 +56,5 @@ namespace StoneAge.CleanArchitecture.Saga
         }
 
         private static void Log_Execution_Error(SagaExecutionContext<TContext> result, Exception e) => result.AddError(e);
-        private void Run_Compensation_Step(SagaStepContainer<TContext> step)
-        {
-            if (step.CompensateAction != null)
-            {
-                step.CompensateAction(Context);
-            }
-        }
     }
 }

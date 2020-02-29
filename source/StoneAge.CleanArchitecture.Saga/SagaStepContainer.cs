@@ -7,7 +7,8 @@ namespace StoneAge.CleanArchitecture.Saga
     public class SagaStepContainer<TContext> : ISagaStep<TContext> where TContext : class
     {
         public ErrorBehavior OnErrorBehavior { get; internal set; }
-        public Action<TContext> CompensateAction { get; internal set; }
+        public Action<TContext> CompensateAction { private get; set; }
+        public Func<TContext, Task> CompensateFunc { private get; set; }
         public ISagaStep<TContext> Step { get; }
         
         public SagaStepContainer(ISagaStep<TContext> step)
@@ -15,9 +16,23 @@ namespace StoneAge.CleanArchitecture.Saga
             Step = step;
         }
 
-        public Task<TContext> Run(TContext context)
+        public async Task<TContext> Run(TContext context)
         {
-            return Step.Run(context);
+            return await Step.Run(context);
+        }
+
+        public async Task<TContext> Compensate(TContext context)
+        {
+            if(CompensateAction != null)
+            {
+                CompensateAction.Invoke(context);
+
+            }else if(CompensateFunc != null)
+            {
+                await CompensateFunc.Invoke(context);
+            }
+
+            return await Task.FromResult(context);
         }
     }
 }
