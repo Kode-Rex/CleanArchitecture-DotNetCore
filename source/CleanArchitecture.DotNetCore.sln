@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoneAge.CleanArchitecture"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoneAge.CleanArchitecture.Saga", "StoneAge.CleanArchitecture.Saga\StoneAge.CleanArchitecture.Saga.csproj", "{359C970A-5932-4BCE-A8A8-3E215648698C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoneAge.CleanArchitecture.Saga.Tests", "StoneAge.CleanArchitecture.Saga.Tests\StoneAge.CleanArchitecture.Saga.Tests.csproj", "{3761AC6D-4B39-4F79-A826-CA05C89BAA42}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{359C970A-5932-4BCE-A8A8-3E215648698C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{359C970A-5932-4BCE-A8A8-3E215648698C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{359C970A-5932-4BCE-A8A8-3E215648698C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3761AC6D-4B39-4F79-A826-CA05C89BAA42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3761AC6D-4B39-4F79-A826-CA05C89BAA42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3761AC6D-4B39-4F79-A826-CA05C89BAA42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3761AC6D-4B39-4F79-A826-CA05C89BAA42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

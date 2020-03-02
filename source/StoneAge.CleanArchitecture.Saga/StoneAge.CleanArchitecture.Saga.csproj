@@ -8,14 +8,14 @@
     <Description>A set of packages to allow for better usecase compoisition when dealing with large pieces of logic</Description>
     <PackageProjectUrl>https://github.com/StoneAgeTechnologies/CleanArchitecture-DotNetCore</PackageProjectUrl>
     <PackageTags>DotNetCore CleanArchitecture</PackageTags>
-    <PackageReleaseNotes>Encapsulated the error handling and allowed async error handling</PackageReleaseNotes>
+    <PackageReleaseNotes>Allowing for async rollback actions and finish actions</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.4</Version>
-    <AssemblyVersion>1.0.4.0</AssemblyVersion>
+    <Version>1.0.6</Version>
+    <AssemblyVersion>1.0.6.0</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="StoneAge.CleanArchitecture.Domain.DotNetCore" Version="4.0.3" />
+    <PackageReference Include="StoneAge.CleanArchitecture.Domain.DotNetCore" Version="4.0.6" />
   </ItemGroup>
 
 </Project>

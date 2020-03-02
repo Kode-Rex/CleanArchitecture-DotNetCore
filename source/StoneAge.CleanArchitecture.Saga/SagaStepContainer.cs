@@ -9,6 +9,8 @@ namespace StoneAge.CleanArchitecture.Saga
         public ErrorBehavior OnErrorBehavior { get; internal set; }
         public Action<TContext> CompensateAction { private get; set; }
         public Func<TContext, Task> CompensateFunc { private get; set; }
+        public ISagaStep<TContext> CompensateStep { private get; set; }
+
         public ISagaStep<TContext> Step { get; }
         
         public SagaStepContainer(ISagaStep<TContext> step)
@@ -26,10 +28,12 @@ namespace StoneAge.CleanArchitecture.Saga
             if(CompensateAction != null)
             {
                 CompensateAction.Invoke(context);
-
             }else if(CompensateFunc != null)
             {
                 await CompensateFunc.Invoke(context);
+            }else if(CompensateStep != null)
+            {
+                await CompensateStep.Run(context);
             }
 
             return await Task.FromResult(context);

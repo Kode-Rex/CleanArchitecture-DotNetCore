@@ -22,7 +22,7 @@ namespace StoneAge.CleanArchitecture.Tests.Saga
             var addTask = new AddStep();
             var plusTenTask = new PlusTenStep();
             var presenter = new PropertyPresenter<TestResult, ErrorOutput>();
-            var sut = new TestUseCase(addTask, plusTenTask);
+            var sut = new AddTwoNumbersThenAddTen(addTask, plusTenTask);
             // act
             sut.Execute(input, presenter);
             // assert
@@ -43,9 +43,9 @@ namespace StoneAge.CleanArchitecture.Tests.Saga
                 b = 25
             };
             var addTask = new AddStep();
-            var errorTask = new ErrorStep();
+            var errorTask = new AddTenErrorStep();
             var presenter = new PropertyPresenter<TestResult, ErrorOutput>();
-            var sut = new TestUseCaseError(addTask, errorTask);
+            var sut = new AddTwoNumbersThenAddTenThrowsError(addTask, errorTask);
             // act
             sut.Execute(input, presenter);
             // assert
@@ -66,8 +66,8 @@ namespace StoneAge.CleanArchitecture.Tests.Saga
             var plusTenTask = new PlusTenStep();
 
             var presenter = new PropertyPresenter<TestResult, ErrorOutput>();
-            var innerUseCase = new TestUseCase(addTask, plusTenTask);
-            var sut = new TestUseCaseWithInnerUseCase(innerUseCase, addTask, plusTenTask);
+            var innerUseCase = new AddTwoNumbersThenAddTen(addTask, plusTenTask);
+            var sut = new AddTwoNumbersTwiceOnceUsingUseCase(innerUseCase, addTask, plusTenTask);
             // act
             sut.Execute(input, presenter);
             // assert
@@ -92,11 +92,11 @@ namespace StoneAge.CleanArchitecture.Tests.Saga
             };
             var myRepository = new MathOperations();
             var addTask = new AddStep();
-            var addWithDiTask = new AddStepWithDi(myRepository);
+            var addWithDiTask = new AddStepWithRepository(myRepository);
 
             var presenter = new PropertyPresenter<TestResult, ErrorOutput>();
 
-            var sut = new TestUseCaseDi(addTask, addWithDiTask);
+            var sut = new AddTwoNumbersUsingDiInjectedRepository(addTask, addWithDiTask);
             // act
             sut.Execute(input, presenter);
             // assert

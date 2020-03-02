@@ -15,6 +15,7 @@ namespace StoneAge.CleanArchitecture.Saga
 
         public SagaBuilder()
         {
+            Context = default;
             Steps = new List<SagaStepContainer<TContext>>();
         }
 
@@ -45,6 +46,17 @@ namespace StoneAge.CleanArchitecture.Saga
             return this;
         }
 
+        public ISagaStepBuilder<TContext> With_Error_Behavior(ErrorBehavior errorBehavior)
+        {
+            if (Steps.Any())
+            {
+                var lastStep = Steps.Last();
+                lastStep.OnErrorBehavior = errorBehavior;
+            }
+
+            return this;
+        }
+
         public ISagaStepBuilder<TContext> With_Roll_Back_Action_On_Error(Action<TContext> compensateAction)
         {
             if (Steps.Any())
@@ -67,25 +79,37 @@ namespace StoneAge.CleanArchitecture.Saga
             return this;
         }
 
-        public IRunSaga<TContext> With_Finish_Actions(Action<TContext> successAction, Action<ErrorOutput> errorAction)
-        {
-            return new Saga<TContext>(Context, Steps, successAction, errorAction);
-        }
-
-        public IRunSaga<TContext> With_Finish_Action(Action<TContext> successAction)
-        {
-            return new Saga<TContext>(Context, Steps, successAction, (ErrorOutput err)=> { });
-        }
-
-        public ISagaStepBuilder<TContext> With_Error_Behavior(ErrorBehavior errorBehavior)
+        public ISagaStepBuilder<TContext> With_Roll_Back_Action_On_Error(ISagaStep<TContext> compensateStep)
         {
             if (Steps.Any())
             {
                 var lastStep = Steps.Last();
-                lastStep.OnErrorBehavior = errorBehavior;
+                lastStep.CompensateStep = compensateStep;
             }
 
             return this;
         }
+
+        public IRunSaga<TContext> With_Finish_Actions(Func<TContext, Task> successFunc, Func<ErrorOutput, Task> errorFunc)
+        {
+            return new Saga<TContext>(Context, Steps, null, null, successFunc, errorFunc);
+        }
+
+        public IRunSaga<TContext> With_Finish_Action(Func<TContext, Task> successFunc)
+        {
+            return new Saga<TContext>(Context, Steps, null, null, successFunc, null);
+        }
+
+        public IRunSaga<TContext> With_Finish_Actions(Action<TContext> successAction, Action<ErrorOutput> errorAction)
+        {
+            return new Saga<TContext>(Context, Steps, successAction, errorAction, null, null);
+        }
+
+        public IRunSaga<TContext> With_Finish_Action(Action<TContext> successAction)
+        {
+            return new Saga<TContext>(Context, Steps, successAction, (ErrorOutput err)=> { }, null, null);
+        }
+
+
     }
 }

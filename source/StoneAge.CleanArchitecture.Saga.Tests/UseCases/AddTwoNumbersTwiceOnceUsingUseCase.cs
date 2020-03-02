@@ -8,13 +8,13 @@ using System;
 
 namespace StoneAge.CleanArchitecture.Tests.Saga.UseCases
 {
-    public class TestUseCaseWithInnerUseCase : IUseCase<TestInput, TestResult>
+    public class AddTwoNumbersTwiceOnceUsingUseCase : IUseCase<TestInput, TestResult>
     {
-        private readonly TestUseCase _useCase;
+        private readonly AddTwoNumbersThenAddTen _useCase;
         private readonly AddStep _addTask;
         private readonly PlusTenStep _plusTenTask;
 
-        public TestUseCaseWithInnerUseCase(TestUseCase useCase, AddStep addTask, PlusTenStep plusTenTask)
+        public AddTwoNumbersTwiceOnceUsingUseCase(AddTwoNumbersThenAddTen useCase, AddStep addTask, PlusTenStep plusTenTask)
         {
             _useCase = useCase;
             _addTask = addTask;
@@ -25,8 +25,8 @@ namespace StoneAge.CleanArchitecture.Tests.Saga.UseCases
         {
             var context = new TestContext
             {
-                a = inputTo.a,
-                b = inputTo.b
+                Value1 = inputTo.a,
+                Value2 = inputTo.b
             };
 
             var workflowResult = new SagaBuilder<TestContext>()
@@ -37,8 +37,8 @@ namespace StoneAge.CleanArchitecture.Tests.Saga.UseCases
                             {
                                 var input = new TestInput
                                 {
-                                    a = ctx.a,
-                                    b = ctx.c
+                                    a = ctx.Value1,
+                                    b = ctx.Result
                                 };
                                 var propertyPresenter = new PropertyPresenter<TestResult, ErrorOutput>();
                                 _useCase.Execute(input, propertyPresenter);
@@ -46,7 +46,7 @@ namespace StoneAge.CleanArchitecture.Tests.Saga.UseCases
                                 {
                                     throw new Exception();
                                 }
-                                ctx.c = propertyPresenter.SuccessContent.Result;
+                                ctx.Result = propertyPresenter.SuccessContent.Result;
                             })
                             .With_Finish_Actions(Respond_With_Success(presenter), Respond_With_Error(presenter))
                             .Run();
@@ -61,7 +61,7 @@ namespace StoneAge.CleanArchitecture.Tests.Saga.UseCases
         {
             presenter.Respond(new TestResult
             {
-                Result = ctx.c
+                Result = ctx.Result
             });
         };
     }

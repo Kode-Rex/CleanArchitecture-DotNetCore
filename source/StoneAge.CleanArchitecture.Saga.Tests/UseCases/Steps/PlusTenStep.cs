@@ -7,7 +7,7 @@ namespace StoneAge.CleanArchitecture.Tests.Saga.Steps
     {
         public Task<TestContext> Run(TestContext context)
         {
-            context.c += 10;
+            context.Result += 10;
             return Task.FromResult(context);
         }
     }

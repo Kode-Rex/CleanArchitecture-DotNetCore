@@ -1,14 +1,14 @@
 ﻿using StoneAge.CleanArchitecture.Domain.Saga;
-using System;
 using System.Threading.Tasks;
 
 namespace StoneAge.CleanArchitecture.Tests.Saga.Steps
 {
-    public class ErrorStep : ISagaStep<TestContext>
+    public class AddStep : ISagaStep<TestContext>
     {
         public Task<TestContext> Run(TestContext context)
         {
-            throw new Exception("Error in task");
+            context.Result = context.Value2 + context.Value1;
+            return Task.FromResult(context);
         }
     }
 }

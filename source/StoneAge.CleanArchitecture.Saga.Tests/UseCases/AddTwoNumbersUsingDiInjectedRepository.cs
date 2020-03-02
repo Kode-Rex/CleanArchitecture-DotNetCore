@@ -6,30 +6,29 @@ using StoneAge.CleanArchitecture.Tests.Saga.Steps;
 
 namespace StoneAge.CleanArchitecture.Tests.Saga.UseCases
 {
-
-    public class TestUseCaseError : IUseCase<TestInput, TestResult>
+    public class AddTwoNumbersUsingDiInjectedRepository : IUseCase<TestInput, TestResult>
     {
-        private readonly ErrorStep _errorTask;
         private readonly AddStep _addTask;
+        private readonly AddStepWithRepository _addWithDiTask;
 
-        public TestUseCaseError(AddStep addTask, ErrorStep errorTask)
+        public AddTwoNumbersUsingDiInjectedRepository(AddStep addTask, AddStepWithRepository addWithDiTask)
         {
-            _errorTask = errorTask;
             _addTask = addTask;
+            _addWithDiTask = addWithDiTask;
         }
 
         public void Execute(TestInput inputTo, IRespondWithSuccessOrError<TestResult, ErrorOutput> presenter)
         {
             var context = new TestContext
             {
-                a = inputTo.a,
-                b = inputTo.b
+                Value1 = inputTo.a,
+                Value2 = inputTo.b
             };
 
             var workflowResult = new SagaBuilder<TestContext>()
                             .With_Context_State(context)
                             .Using_Step(_addTask)
-                            .Using_Step(_errorTask)
+                            .Using_Step(_addWithDiTask)
                             .With_Roll_Back_Action_On_Error((ctx) =>
                             {
                                 presenter.Respond(new ErrorOutput("Error on step 2"));
@@ -38,7 +37,7 @@ namespace StoneAge.CleanArchitecture.Tests.Saga.UseCases
                             {
                                 presenter.Respond(new TestResult
                                 {
-                                    Result = ctx.c
+                                    Result = ctx.Result
                                 });
                             })
                             .Run();
