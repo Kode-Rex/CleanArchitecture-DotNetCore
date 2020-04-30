@@ -8,10 +8,10 @@
     <Description>A set of packages to allow for better usecase compoisition when dealing with large pieces of logic</Description>
     <PackageProjectUrl>https://github.com/StoneAgeTechnologies/CleanArchitecture-DotNetCore</PackageProjectUrl>
     <PackageTags>DotNetCore CleanArchitecture</PackageTags>
-    <PackageReleaseNotes>Allowing for async rollback actions and finish actions</PackageReleaseNotes>
+    <PackageReleaseNotes>Improved error logging to add inner exception along with wrapping compenstate action in try-catch to avoid it causing problems</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.6</Version>
-    <AssemblyVersion>1.0.6.0</AssemblyVersion>
+    <Version>1.0.8</Version>
+    <AssemblyVersion>1.0.8.0</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>

@@ -42,9 +42,9 @@ namespace StoneAge.CleanArchitecture.Saga
                 catch (Exception e)
                 {
                     Log_Execution_Error(result, e);
-                    await step.Compensate(Context);
+                    await Compensate(result, step);
 
-                    if (step.OnErrorBehavior == ErrorBehavior.Terminate)
+                    if (Terminate_On_Error(step))
                     {
                         break;
                     }
@@ -60,6 +60,20 @@ namespace StoneAge.CleanArchitecture.Saga
             await Invoke_Success_Handling();
 
             return result;
+        }
+
+        private static bool Terminate_On_Error(SagaStepContainer<TContext> step) => step.OnErrorBehavior == ErrorBehavior.Terminate;
+
+        private async Task Compensate(SagaExecutionContext<TContext> result, SagaStepContainer<TContext> step)
+        {
+            try
+            {
+                await step.Compensate(Context);
+            }
+            catch (Exception e2)
+            {
+                result.AddError(e2);
+            }
         }
 
         private async Task Invoke_Success_Handling()
@@ -86,6 +100,9 @@ namespace StoneAge.CleanArchitecture.Saga
             }
         }
 
-        private static void Log_Execution_Error(SagaExecutionContext<TContext> result, Exception e) => result.AddError(e);
+        private static void Log_Execution_Error(SagaExecutionContext<TContext> result, Exception e)
+        {
+            result.AddError(e);
+        }
     }
 }

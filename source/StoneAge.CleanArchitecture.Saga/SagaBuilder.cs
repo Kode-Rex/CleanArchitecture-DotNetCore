@@ -57,6 +57,8 @@ namespace StoneAge.CleanArchitecture.Saga
             return this;
         }
 
+        // todo : add .Halt_On_Condition((ctx)=>{ });
+
         public ISagaStepBuilder<TContext> With_Roll_Back_Action_On_Error(Action<TContext> compensateAction)
         {
             if (Steps.Any())
@@ -105,6 +107,7 @@ namespace StoneAge.CleanArchitecture.Saga
             return new Saga<TContext>(Context, Steps, successAction, errorAction, null, null);
         }
 
+        // todo : add ctx to err
         public IRunSaga<TContext> With_Finish_Action(Action<TContext> successAction)
         {
             return new Saga<TContext>(Context, Steps, successAction, (ErrorOutput err)=> { }, null, null);

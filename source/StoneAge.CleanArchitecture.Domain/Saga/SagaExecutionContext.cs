@@ -15,7 +15,7 @@ namespace StoneAge.CleanArchitecture.Domain.Saga
 
         public void AddError(Exception e)
         {
-            Errors.AddError(e.Message);
+            Errors.AddError(e.Message + Environment.NewLine + e.InnerException);
         }
 
         public bool HasErrors()
