@@ -37,6 +37,7 @@ namespace StoneAge.CleanArchitecture.Saga
             {
                 try
                 {
+                    // todo : allow errors to bubble back through the context to I can avoid throwing exceptions
                     Context = await step.Run(Context);
                 }
                 catch (Exception e)

@@ -49,9 +49,29 @@ namespace StoneAge.CleanArchitecture.Tests.Saga
             // act
             sut.Execute(input, presenter);
             // assert
-            var expected = new ErrorOutput("Error on step 2");
+            var expected = new ErrorOutput("Error in task");
             presenter.ErrorContent.Should().BeEquivalentTo(expected);
         }
+
+        [Test]
+        [Ignore("Need to think about getting context to return presenter errors")]
+        public void When_Errors_Expect_Termination_With_Step_Error_Returned()
+        {
+            // arrange
+            var input = new TestInput
+            {
+                a = 10,
+                b = 25
+            };
+            var presenter = new PropertyPresenter<TestResult, ErrorOutput>();
+            var sut = new AddTwoNumbersTerminateOnError();
+            // act
+            sut.Execute(input, presenter);
+            // assert
+            var expected = new ErrorOutput("Error in task");
+            presenter.ErrorContent.Should().BeEquivalentTo(expected);
+        }
+
 
         [Test]
         public void When_Inner_UseCase_Expect_65()
