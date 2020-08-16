@@ -8,14 +8,14 @@
     <Description>A set of packages to allow for better usecase compoisition when dealing with large pieces of logic</Description>
     <PackageProjectUrl>https://github.com/StoneAgeTechnologies/CleanArchitecture-DotNetCore</PackageProjectUrl>
     <PackageTags>DotNetCore CleanArchitecture</PackageTags>
-    <PackageReleaseNotes>Improved error logging to add inner exception along with wrapping compenstate action in try-catch to avoid it causing problems</PackageReleaseNotes>
+    <PackageReleaseNotes>Added Error object to context and forced all context to inherit from SagaContext so they have access to this new error handling. This allow the user to use internal presenters without needing to format the errors into an exception to halt workflow execution</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.8</Version>
-    <AssemblyVersion>1.0.8.0</AssemblyVersion>
+    <Version>2.0.0</Version>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="StoneAge.CleanArchitecture.Domain.DotNetCore" Version="4.0.6" />
+    <PackageReference Include="StoneAge.CleanArchitecture.Domain.DotNetCore" Version="4.1.1" />
   </ItemGroup>
 
 </Project>

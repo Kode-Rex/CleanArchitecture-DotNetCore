@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StoneAge.CleanArchitecture.Saga
 {
-    public class Saga<TContext> : IRunSaga<TContext> where TContext : class
+    public class Saga<TContext> : IRunSaga<TContext> where TContext : SagaContext
     {
         public TContext Context { get; set; }
         public List<SagaStepContainer<TContext>> Steps { get; }
@@ -37,8 +37,17 @@ namespace StoneAge.CleanArchitecture.Saga
             {
                 try
                 {
-                    // todo : allow errors to bubble back through the context to I can avoid throwing exceptions
                     Context = await step.Run(Context);
+                    if (Context.HasErrors())
+                    {
+                        result.AddError(Context.Errors);
+                        await Compensate(result, step);
+
+                        if (Terminate_On_Error(step))
+                        {
+                            break;
+                        }
+                    }
                 }
                 catch (Exception e)
                 {

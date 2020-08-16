@@ -54,7 +54,6 @@ namespace StoneAge.CleanArchitecture.Tests.Saga
         }
 
         [Test]
-        [Ignore("Need to think about getting context to return presenter errors")]
         public void When_Errors_Expect_Termination_With_Step_Error_Returned()
         {
             // arrange
@@ -68,7 +67,7 @@ namespace StoneAge.CleanArchitecture.Tests.Saga
             // act
             sut.Execute(input, presenter);
             // assert
-            var expected = new ErrorOutput("Error in task");
+            var expected = new ErrorOutput("error adding two numbers");
             presenter.ErrorContent.Should().BeEquivalentTo(expected);
         }
 

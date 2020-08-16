@@ -24,7 +24,7 @@ namespace StoneAge.CleanArchitecture.Tests.Saga.UseCases
                             .Using_Step(new Func<TestContext, Task>(async (ctx) =>
                             {
                                 await Add_Numbers(ctx);
-                                presenter.Respond(new ErrorOutput("add two numbers step error"));
+                                ctx.AddError("error adding two numbers");
                             }))
                             .With_Error_Behavior(Domain.Saga.ErrorBehavior.Terminate) // could be Terminate so saga halts at this step
                             .Using_Step(new Func<TestContext, Task>(async (ctx) =>

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace StoneAge.CleanArchitecture.Saga
 {
     public class SagaBuilder<TContext> : ISagaBuilder<TContext>, 
-                                         ISagaStepBuilder<TContext> where TContext : class
+                                         ISagaStepBuilder<TContext> where TContext : SagaContext
     {
         public TContext Context { get; set; }
         public List<SagaStepContainer<TContext>> Steps { get; }
