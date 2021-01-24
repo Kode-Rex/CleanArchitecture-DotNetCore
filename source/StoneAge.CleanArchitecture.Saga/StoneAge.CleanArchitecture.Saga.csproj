@@ -15,7 +15,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="StoneAge.CleanArchitecture.Domain.DotNetCore" Version="4.1.1" />
+    <PackageReference Include="StoneAge.CleanArchitecture.Domain.DotNetCore" Version="5.0.0" />
   </ItemGroup>
 
 </Project>
