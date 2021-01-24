@@ -49,7 +49,7 @@ namespace StoneAge.CleanArchitecture.Tests.Saga
             // act
             sut.Execute(input, presenter);
             // assert
-            var expected = new ErrorOutput("Error in task");
+            var expected = new ErrorOutput("Error in task\r\n");
             presenter.ErrorContent.Should().BeEquivalentTo(expected);
         }
 

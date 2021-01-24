@@ -1,17 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <Product>StoneAge.CleanArchitecture.Saga</Product>
     <Company>StoneAge Technologies</Company>
     <Authors>StoneAge Technologies</Authors>
     <Description>A set of packages to allow for better usecase compoisition when dealing with large pieces of logic</Description>
     <PackageProjectUrl>https://github.com/StoneAgeTechnologies/CleanArchitecture-DotNetCore</PackageProjectUrl>
     <PackageTags>DotNetCore CleanArchitecture</PackageTags>
-    <PackageReleaseNotes>Added Error object to context and forced all context to inherit from SagaContext so they have access to this new error handling. This allow the user to use internal presenters without needing to format the errors into an exception to halt workflow execution</PackageReleaseNotes>
+    <PackageReleaseNotes>.net 5 upgrade</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>2.0.0</Version>
-    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <Version>5.0.0</Version>
+    <AssemblyVersion>5.0.0.0</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>

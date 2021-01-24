@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.IO;
-using Microsoft.AspNetCore.Mvc;
 
 namespace StoneAge.CleanArchitecture.HttpResponses
 {
