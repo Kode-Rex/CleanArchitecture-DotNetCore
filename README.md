@@ -1,7 +1,7 @@
 # README #
 
-Utilities to help with implmenting the clean architecture in .NetCore.  
-They reduce the common boiler plate for presenters and usecases.  
+Utilities to help with implementing the clean architecture in .NetCore.  
+They reduce the common boilerplate for presenters and use cases.  
 
   
 Nuget Packages:   
