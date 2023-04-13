@@ -1,21 +1,21 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <Product>StoneAge.CleanArchitecture.Saga</Product>
     <Company>StoneAge Technologies</Company>
     <Authors>StoneAge Technologies</Authors>
-    <Description>A set of packages to allow for better usecase compoisition when dealing with large pieces of logic</Description>
+    <Description>A set of packages to allow for better usecase composition when dealing with large pieces of logic</Description>
     <PackageProjectUrl>https://github.com/StoneAgeTechnologies/CleanArchitecture-DotNetCore</PackageProjectUrl>
     <PackageTags>DotNetCore CleanArchitecture</PackageTags>
-    <PackageReleaseNotes>.net 5 upgrade</PackageReleaseNotes>
+    <PackageReleaseNotes>.net 7 upgrade</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>5.0.0</Version>
-    <AssemblyVersion>5.0.0.0</AssemblyVersion>
+    <Version>7.0.0</Version>
+    <AssemblyVersion>7.0.0.0</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="StoneAge.CleanArchitecture.Domain.DotNetCore" Version="5.0.0" />
+    <PackageReference Include="StoneAge.CleanArchitecture.Domain.DotNetCore" Version="7.0.0" />
   </ItemGroup>
 
 </Project>

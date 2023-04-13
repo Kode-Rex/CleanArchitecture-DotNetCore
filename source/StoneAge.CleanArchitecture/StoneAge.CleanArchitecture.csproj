@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>Travis Frisinger</Authors>
     <Company>StoneAge Technologies</Company>
@@ -9,19 +9,19 @@
     <AssemblyName>StoneAge.CleanArchitecture</AssemblyName>
     <RootNamespace>StoneAge.CleanArchitecture</RootNamespace>
     <PackageId>StoneAge.CleanArchitecture.DotNetCore</PackageId>
-    <Version>5.0.0</Version>
-    <AssemblyVersion>5.0.0.0</AssemblyVersion>
-    <FileVersion>5.0.0.0</FileVersion>
+    <Version>7.0.0</Version>
+    <AssemblyVersion>7.0.0.0</AssemblyVersion>
+    <FileVersion>7.0.0.0</FileVersion>
     <Product>StoneAge.CleanArchitecture.DotNetCore</Product>
     <PackageProjectUrl>https://github.com/StoneAgeTechnologies/CleanArchitecture-DotNetCore</PackageProjectUrl>
     <PackageTags>CleanArchitecture DotNetCore</PackageTags>
-    <PackageReleaseNotes>.net 5 upgrade</PackageReleaseNotes>
+    <PackageReleaseNotes>.net 7 upgrade</PackageReleaseNotes>
     <PackageIconUrl>https://cdn1.imggmi.com/uploads/2019/3/1/82f11997d33c432f92d56007d7ca9432-full.png</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="StoneAge.CleanArchitecture.Domain.DotNetCore" Version="5.0.0" />
   </ItemGroup>
 
