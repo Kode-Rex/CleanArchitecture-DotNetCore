@@ -1,4 +1,5 @@
-﻿using FluentAssertions;
+﻿using System;
+using FluentAssertions;
 using NUnit.Framework;
 using StoneAge.CleanArchitecture.Domain.Messages;
 using StoneAge.CleanArchitecture.Domain.Presenters;
@@ -49,7 +50,7 @@ namespace StoneAge.CleanArchitecture.Tests.Saga
             // act
             sut.Execute(input, presenter);
             // assert
-            var expected = new ErrorOutput("Error in task\r\n");
+            var expected = new ErrorOutput($"Error in task{Environment.NewLine}");
             presenter.ErrorContent.Should().BeEquivalentTo(expected);
         }
 
